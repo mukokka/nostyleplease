@@ -121,7 +121,7 @@ li { margin: 0.4rem 0; }
 
 a {
   text-decoration: none;
-  text-shadow: #fae122 0px 3px 10px;
+  text-shadow: #fae122 0px 3px px;
 }
 
 a:hover {
@@ -304,7 +304,7 @@ strong, b {
 
 .post-categories strong {
   font-weight: bold; /* 强调 "Categories:" 文字 */
-  color: #e8f92d; /* 设置强调文字颜色 */
+  color: #f0e116; /* 设置强调文字颜色 */
 }
 
 .post-categories a {
