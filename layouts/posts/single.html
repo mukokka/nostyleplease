@@ -18,23 +18,6 @@
     {{ end }}
     {{ .Content }}
 
-        <!-- Waline 评论区 -->
-        <div id="waline"></div>
-        <script>
-          Waline.init({
-            el: '#waline',
-            serverURL: 'https://waline-moko.vercel.app', // 替换为你的 Waline 服务器地址
-            // 其他配置项
-            pageview: false, // 开启页面浏览量统计
-            visitor: true, // 开启访客信息统计
-            emoji = ["https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
-            "https://cdn.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif",
-            "https://cdn.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-png",
-            "https://unpkg.com/@waline/emojis@1.1.0/tw-emoji",
-            "https://unpkg.com/@waline/emojis@1.1.0/alus"],
-            meta = ["nick", "mail", "link"],
-            requiredMeta = []
-          });
-        </script>
+    {{ partial "comment.html" . }}
 </article>
 {{ end }}
