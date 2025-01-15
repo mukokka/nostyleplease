@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<header>
+    <h1>{{ $.Site.Title }}</h1>
+    {{- if $.Site.Params.theme_config.show_description -}}
+    <p class="site-description">{{ .Site.Params.description }}</p>
+    {{- end -}}
+</header>
+
+<div class="two-column-layout">
+    <aside class="nav">
+        <p><a href="{{ .Site.BaseURL }}">✫ 首页</a></p>
+        <p><a href="{{ .Site.BaseURL }}about">✫ 关于</a></p>
+        <p><a href="{{ .Site.BaseURL }}posts">✫ 归档</a></p>
+        <p><a href="{{ .Site.BaseURL }}friends">✫ 友邻</a></p>
+        <p><a href="{{ .Site.BaseURL }}others">✫ 其他</a></p>     
+        <p><a href="index.xml">✫ RSS</a></p>
+    </aside>
+
+    <main class="content">
+        {{ .Content }}
+        {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+    </main>
+</div>
+{{ end }}

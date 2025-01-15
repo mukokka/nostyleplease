@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+                <div class="post-meta">
+                    <p><a href="{{ .Site.BaseURL }}">首页</a> | <a href="{{ .Site.BaseURL }}about">关于</a> | <a href="{{ .Site.BaseURL }}posts">归档</a> | <a href="{{ .Site.BaseURL }}friends">友邻</a> | <a href="{{ .Site.BaseURL }}others">其他</a> | <a href="index.xml">RSS</a></p>
+                </div>
+                {{- block "main" . }}{{- end }}
+            </div>
+        </main>
+    </body>
+    {{- if .Params.custom_js -}}
+        {{- range .Params.custom_js -}}
+            {{ $js := resources.Get (print "js/" . ".js") }}
+            <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+        {{- end -}}
+    {{- end -}}
+</html>
+
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+{{ partial "post_list.html" (dict "context" . "section" .Section)}}
+{{ end }}

@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<article>
+    <h1>{{ .Title }}</h1>
+
+    <div class="postmeta">
+        <p>
+            <time datetime="{{ .Date }}">
+                {{ .Date | time.Format site.Params.theme_config.date_format }}
+            </time>
+            • 约{{ .WordCount }}字
+        </p>
+    </div>
+
+    {{ if .Params.toc }}
+        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+            {{ .TableOfContents }}
+        </aside>
+    {{ end }}
+    {{ .Content }}
+</article>
+{{ end }}

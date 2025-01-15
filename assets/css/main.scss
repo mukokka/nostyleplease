@@ -1,0 +1,270 @@
+// -------------- THEME SWITCHER -------------- //
+@mixin theme($--bg-color, $--primary-text-color, $--secondary-text-color, $--link-color, $--visited-link-color, $--highlight) {
+  background-color: $--bg-color;
+
+  color: $--primary-text-color;
+
+  a {
+    color: #fff59f;
+    &:visited { color: #fff59f; }
+  }
+
+  details {
+    border: thin solid $--primary-text-color;
+  }
+
+  details summary {
+    color: $--primary-text-color;
+  }
+
+  details[open] summary {
+    border-bottom: 1px solid $--primary-text-color;
+  }
+
+  pre {
+    background: $--bg-color;
+  }
+
+  code:not(pre > code) {
+    background-color: $--primary-text-color;
+    color: $--bg-color;
+  }
+
+  *:target {
+    background: $--highlight;
+    color: $--primary-text-color;
+   }
+
+  table, th, td {
+    border: thin solid $--primary-text-color;
+  }
+
+  .toc {
+    border: thin solid $--primary-text-color;
+    padding: 1rem;
+  }
+
+  figcaption { color: $--secondary-text-color; }
+
+}
+
+@mixin dark-appearance {
+  @include theme(#000000, #eeeeee, #000000, #79a8ff, #f78fe7, #2f3849); // modus-vivendi
+}
+
+@mixin light-appearance {
+  @include theme(#ffffff, #000000, #595959, #3548cf, #8f0075, #f8f6ef); // modus-operandi
+}
+
+body[a="dark"] { @include dark-appearance; }
+body[a="light"] { @include light-appearance; }
+
+@media (prefers-color-scheme: dark) {
+  body[a="auto"] { @include dark-appearance; }
+}
+
+@media (prefers-color-scheme: light) {
+  body[a="auto"] { @include light-appearance; }
+}
+
+// -------------------------------------------- //
+
+html { height: 100%; }
+
+body {
+  font-family: 'Noto Serif SC','Noto Serif KR', serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100%;
+  overflow-wrap: break-word;
+}
+
+// 应用主题样式
+body[a="dark"] {
+  background: 
+    /* 网格效果 */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    ),
+    /* 现有的背景效果 */
+    linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+    radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+    radial-gradient(circle closest-side, #ffffff 50%, rgba(255,255,255,0) 0) 60px 0 rgb(108, 173, 211);
+  background-size: 120px 200px;
+  background-repeat: repeat, repeat, repeat-x, repeat-x, repeat-x;
+}
+
+body[a="light"] {
+  background-color:white;
+  background-image: linear-gradient(90deg, rgba(199, 163, 163, 0.5) 50%, transparent 50%),
+  linear-gradient(rgba(199, 156, 156, 0.5) 50%, transparent 50%);
+  background-size:50px 50px;
+}
+
+h2, h3, h4, h5, h6 { margin-top: 1.5rem; }
+
+p { margin: 1rem 0; }
+
+li { margin: 0.4rem 0; }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold; /* 确保文本加粗 */
+  text-shadow: #ffffff86 0px 0px 10px
+}
+
+hr {
+  text-align: center;
+  border: 0;
+  margin: 2rem 0;
+
+  &:before { content: '/////' }
+  &:after { content: attr(data-content) '/////' }
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto; /* Fix pre content overflowing parent without scroll bar */
+}
+
+table { width: 100%; }
+
+table, th, td {
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
+
+code {
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+code:not(pre > code) {
+  padding: 0.1em 0.2em;
+  font-size: 90%;
+}
+
+code.has-jax {
+  -webkit-font-smoothing: antialiased;
+  background: inherit !important;
+  border: none !important;
+  font-size: 100%;
+}
+
+blockquote {
+  background-color: #ffffff38;
+  border-left: 4px solid #f8f3a7;
+  margin: 20px 0;
+  padding: 5px 20px;
+  font-style: normal;
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  text-align: center;
+  opacity: 0.5;
+}
+
+details {
+  padding: 1rem;
+}
+
+details summary {
+  text-decoration: none;
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#0056b3;
+  text-align: left !important;
+}
+
+/* 设置 post-meta 中超链接的默认颜色 */
+.post-meta a {
+  color: #0056b3 !important; /* 例如，设置为蓝色 */
+  text-decoration: none; /* 去除下划线 */
+}
+
+/* 设置 post-meta 中超链接鼠标悬停时的颜色 */
+.post-meta a:hover {
+  color: #0056b3; /* 例如，设置为深蓝色 */
+  font-weight: bold; /* 确保文本加粗 */
+  text-shadow: #3f5d808f 0px 0px 20px
+}
+
+.w {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.toc {
+  padding: 1rem;
+}
+
+/* 设置两栏布局 */
+.two-column-layout {
+  display: flex;
+  gap: 20px; /* 两栏之间的间距 */
+  margin-top: 20px;
+}
+
+.two-column-layout .note {
+  flex: 1; /* note 栏的宽度 */
+  background-color: #f5d4d400; /* 背景颜色 */
+  padding: 15px; /* 内边距 */
+  border-radius: 10px; /* 圆角 */
+  border: 1px solid #e0e0e000; /* 边框 */
+}
+
+.two-column-layout .content {
+  flex: 4; /* content 栏的宽度 */
+}
+
+footer {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #33333300;
+  color: #ebe5b3;
+  text-align: center;
+}
+
+.site-description {
+  color: #242952; /* 深蓝色 */
+}
+
+strong, b {
+  font-weight: bold; /* 确保文本加粗 */
+}

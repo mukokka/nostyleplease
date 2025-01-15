@@ -1,0 +1,21 @@
+{{ if site.Params.theme_config.isShowFooter }}
+    {{ $footerContent := readFile "layouts/footer.md" }}
+    {{ if and $footerContent (ne $footerContent "") }}
+        {{ $footerContent | markdownify }}
+    {{ else }}
+        {{ warnf "layouts/footer.md file is not found or empty. Falling back to default footer." }}
+        <footer class="site-footer">
+            <p>&copy; 2022-{{ now.Format "2006" }} · <span id="site-running-days"></span> Days</p>
+        </footer>
+        <script>
+            function calculateRunningTime() {
+                const startDate = new Date("2022-05-02"); // 博客启动日期
+                const today = new Date();
+                const timeDiff = today - startDate;
+                const days = Math.floor(timeDiff / (1000 * 3600 * 24));
+                document.getElementById("site-running-days").innerText = days;
+            }
+            window.onload = calculateRunningTime;
+        </script>
+    {{ end }}
+{{ end }}

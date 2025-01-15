@@ -1,0 +1,8 @@
+[[entries]]
+title = "最近："
+
+  [entries.post_list]
+  limit = 8
+  show_more = true
+  show_more_text = "更多..."
+  show_more_url = "posts"

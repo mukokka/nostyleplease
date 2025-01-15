@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记忆面包机 on </title>
+    <link>http://localhost:1313/categories/%E8%AE%B0%E5%BF%86%E9%9D%A2%E5%8C%85%E6%9C%BA/</link>
+    <description>Recent content in 记忆面包机 on </description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 30 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E8%AE%B0%E5%BF%86%E9%9D%A2%E5%8C%85%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>天呐博主，这已经是咱们在博客写的第三个年终总结了</title>
+      <link>http://localhost:1313/posts/dec/</link>
+      <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dec/</guid>
+      <description>&lt;p&gt;但最近我走在路上想着怎么写这一篇年度总结的时候，总觉得我总结不好这一年。所有事情顺其自然地发生在我身上，而我还没有厘清它们的规律和意义。&lt;/p&gt;&#xA;&lt;p&gt;想不到怎么写，我们先来看看去年的年终总结说了什么。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
