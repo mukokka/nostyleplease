@@ -3,7 +3,6 @@
     {{ if and $footerContent (ne $footerContent "") }}
         {{ $footerContent | markdownify }}
     {{ else }}
-        {{ warnf "layouts/footer.md file is not found or empty. Falling back to default footer." }}
         <footer class="site-footer">
             <p>&copy; 2022-{{ now.Format "2006" }} · <span id="site-running-days"></span> Days</p>
         </footer>

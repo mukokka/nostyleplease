@@ -5,8 +5,8 @@
   color: $--primary-text-color;
 
   a {
-    color: #fff59f;
-    &:visited { color: #fff59f; }
+    color: #025a1f;
+    &:visited { color: #025a1f; }
   }
 
   details {
@@ -49,7 +49,7 @@
 }
 
 @mixin dark-appearance {
-  @include theme(#000000, #faf4f4, #000000, #79a8ff, #f78fe7, #2f3849); // modus-vivendi
+  @include theme(#000000, #203968, #000000, #79a8ff, #f78fe7, #2f3849); // modus-vivendi
 }
 
 @mixin light-appearance {
@@ -101,7 +101,7 @@ body[a="dark"] {
     /* 现有的背景效果 */
     linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
     radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-    radial-gradient(circle closest-side, #ffffff 50%, rgba(255,255,255,0) 0) 60px 0 rgb(108, 173, 211);
+    radial-gradient(circle closest-side, #ffffff 50%, rgba(255,255,255,0) 0) 60px 0 rgb(112, 176, 213);
   background-size: 120px 200px;
   background-repeat: repeat, repeat, repeat-x, repeat-x, repeat-x;
 }
@@ -121,11 +121,12 @@ li { margin: 0.4rem 0; }
 
 a {
   text-decoration: none;
+  text-shadow: #ffbb00 0px 0px 12px;
 }
 
 a:hover {
   font-weight: bold; /* 确保文本加粗 */
-  text-shadow: #ffffff86 0px 0px 10px
+  text-shadow: #1d6ade86 0px 0px 10px;
 }
 
 hr {
@@ -257,7 +258,7 @@ footer {
   margin-top: auto;
   padding: 10px;
   background-color: #33333300;
-  color: #ebe5b3;
+  color: #00000071;
   text-align: center;
 }
 
@@ -267,4 +268,19 @@ footer {
 
 strong, b {
   font-weight: bold; /* 确保文本加粗 */
+}
+
+/* 在全局CSS文件中定义变量 */
+
+:root {
+  --blur-color-light: #5a2a1a; /* 默认的高斯模糊颜色（亮色模式） */
+  --blur-color-dark: #e8ddd1; /* 暗色模式下的高斯模糊颜色 */
+}
+
+[data-theme='dark'] {
+  --blur-color: var(--blur-color-dark);
+}
+
+[data-theme='light'] {
+  --blur-color: var(--blur-color-light);
 }
