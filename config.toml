@@ -36,6 +36,7 @@ title = ""
     ordered    = false
 
 [params]
+  enableCarousel = true
   description = 'WELCOME(´▽`ʃ♡ƪ)'
   [params.theme_config]
     show_description  = true

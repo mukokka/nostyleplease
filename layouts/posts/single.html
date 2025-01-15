@@ -11,13 +11,20 @@
         </p>
     </div>
 
-    {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
-    {{ end }}
+    <div style="position: fixed; right:3px; max-width:400px; overflow:auto; top: 100px; width: 12vw; bottom:50px; font-size: 90%;">
+        {{ partial "toc.html" . }}
+    </div>
     {{ .Content }}
+    <div class="pre-next">
+        {{with .PrevInSection}}
+            <a class="pre-next-btn bg" href="{{.Permalink}}"><< {{ .Title }}</a>
+        {{end}}
+        {{with .NextInSection}}
+            <a class="pre-next-btn bg" href="{{.Permalink}}">{{ .Title }} >></a>
+        {{end}}
+    </div>
 
     {{ partial "comment.html" . }}
+    {{ partial "footer.html" . }}
 </article>
 {{ end }}

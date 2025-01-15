@@ -30,5 +30,5 @@
 {{ else }}
     {{ partial "post_list.html" (dict "context" . "section" .Section)}}
 {{ end }}
-
+{{ partial "footer.html" . }}
 {{ end }}

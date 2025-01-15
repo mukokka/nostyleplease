@@ -14,9 +14,9 @@
   
       init({
         el: '#waline',
-        serverURL: 'https://waline-moko.vercel.app',
-        lang: 'zh-CN',
-        reaction: false,
+        lang : 'zh',
+        reaction: true,
+        serverURL: 'https://waline-moko.vercel.app/',
         emoji: [
             "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
             "https://cdn.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif",
@@ -24,8 +24,6 @@
             "https://unpkg.com/@waline/emojis@1.1.0/tw-emoji",
             "https://unpkg.com/@waline/emojis@1.1.0/alus"
         ],
-        pageview: false,// 开启页面浏览量统计
-        visitor: false, // 开启访客信息统计
       });
     </script>
   </body>
@@ -80,7 +78,7 @@
 
     .wl-btn.primary {
         border-color: transparent !important;
-        background: rgb(103, 155, 176);
+        background: rgb(44, 130, 154);
         color: white;
     }
 
@@ -91,12 +89,12 @@
     }
 
     :root {
-        --waline-theme-color: rgb(103, 155, 176);
-        --waline-active-color: rgb(255, 0, 0);
+        --waline-theme-color: rgb(44, 130, 154);
+        --waline-active-color: rgb(44, 130, 154);
         --waline-light-grey: unset;
         --waline-info-color: unset;
         /*--waline-color: unset;*/
-        --waline-border: 0px solid rgb(103, 155, 176);
+        --waline-border: 0px solid rgb(255, 0, 0);
     }
 
     .wl-editor:focus,
@@ -105,7 +103,7 @@
     }
 
     .wl-panel {
-        background-color: #ffffff9f;
+        background-color: #fffcf9;
         /*评论区输入框的背景颜色*/
     }
 
