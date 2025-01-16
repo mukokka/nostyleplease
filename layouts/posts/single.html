@@ -24,7 +24,9 @@
         {{end}}
     </div>
 
-    {{ partial "comment.html" . }}
+    {{ if .Params.comment }}
+        {{ partial "comment.html" . }}
+    {{ end }}
     {{ partial "footer.html" . }}
 </article>
 {{ end }}

@@ -17,6 +17,8 @@
     {{ end }}
 
     {{ .Content }} 
-    {{ partial "comment.html" . }}
+    {{ if .Params.comment }}
+        {{ partial "comment.html" . }}
+    {{ end }}
 </article>
 {{ end }}

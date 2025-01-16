@@ -364,3 +364,9 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
       margin: 0 !important;
   }
 }
+
+@media only screen and (max-width: 1224px) {
+  .post-toc {
+    display: none;
+  }
+}

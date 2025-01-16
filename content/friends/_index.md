@@ -1,6 +1,8 @@
 ---
 title: ""
 draft: false
+comment: true
+
 ---
 
 ### 我的网络邻居

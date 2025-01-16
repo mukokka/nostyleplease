@@ -24,5 +24,8 @@
 
 {{ .Content }}
 {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+{{ if .Params.comment }}
+    {{ partial "comment.html" . }}
+{{ end }}
 {{ partial "footer.html" . }}
 {{ end }}
