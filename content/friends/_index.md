@@ -2,6 +2,7 @@
 title: ""
 draft: false
 comment: true
+slug: 'friends/'
 
 ---
 
