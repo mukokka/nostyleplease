@@ -4,6 +4,7 @@ languageCode = "zh-CN"
 theme = "nostyleplease"
 hasCJKLanguage = true
 title = ""
+disableKinds = ["RSS"]
 
 [module]
   [module.hugoVersion]
