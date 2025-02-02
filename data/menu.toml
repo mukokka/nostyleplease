@@ -17,7 +17,7 @@ title = "施工中🚧"
 title = "最近博客："
 
   [entries.post_list]
-  limit = 8
+  limit = 5
   show_more = true
   show_more_text = "更多..."
   show_more_url = "posts"
