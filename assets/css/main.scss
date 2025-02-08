@@ -99,9 +99,9 @@ body[a="dark"] {
       rgba(255, 255, 255, 0.1) 20px
     ),
     /* 现有的背景效果 */
-    linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-    radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-    radial-gradient(circle closest-side, #ffffff 50%, rgba(255,255,255,0) 0) 60px 0 rgb(112, 176, 213);
+    linear-gradient(#f5e2a4 50%, rgba(255,255,255,0) 0) 0 0,
+    radial-gradient(circle closest-side, #fade96 53%, rgba(255,255,255,0) 0) 0 0,
+    radial-gradient(circle closest-side, #fae8af 50%, rgba(255,255,255,0) 0) 60px 0 rgb(150, 207, 138);
   background-size: 120px 200px;
   background-repeat: repeat, repeat, repeat-x, repeat-x, repeat-x;
 }
