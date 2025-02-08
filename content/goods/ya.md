@@ -9,4 +9,4 @@ slug: '/ya/'
 
 正在~~全力~~尽力加载中…
 
-{{< gallery "images/ya">}}
+{{< gallery "images/goods/ya">}}

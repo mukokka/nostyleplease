@@ -9,4 +9,4 @@ slug: '/potadog/'
 
 正在~~全力~~尽力加载中…
 
-{{< gallery "images/potadog">}}
+{{< gallery "images/goods/potadog">}}

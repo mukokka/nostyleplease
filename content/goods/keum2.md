@@ -9,4 +9,4 @@ slug: '/keum2/'
 
 正在~~全力~~尽力加载中…
 
-{{< gallery "images/keum2">}}
+{{< gallery "images/goods/keum2">}}

@@ -9,4 +9,4 @@ slug: '/wang/'
 
 正在~~全力~~尽力加载中…
 
-{{< gallery "images/wang">}}
+{{< gallery "images/goods/wang">}}

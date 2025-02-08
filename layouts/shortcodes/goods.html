@@ -1,50 +1,65 @@
-<div class="goods">
-    {{ range .Site.Data.goods.goods }}
-    <div class="goods-bankuai">
-        <!-- 图片部分，只有当 .link 存在时才包裹 <a> 标签 -->
-        {{ if .link }}
-        <a href="{{ .link | absURL }}">
-            <img loading="lazy" class="whitey" src="{{ .image }}" alt="{{ .title }}">
-        </a>
-        {{ else }}
-        <img loading="lazy" class="whitey" src="{{ .image }}" alt="{{ .title }}">
-        {{ end }}
+{{- $linkFileCounts := dict -}}
 
-        
-        <div class="goods-info">
-            <div class="goods-title">
-                <div style="text-align: center;">
-                    <!-- 标题部分，点击后跳转到链接 -->
-                    {{ if .link }}
-                        <a href="{{ .link | absURL }}" class="goods-title-link">{{ .title }}</a>
-                    {{ else }}
-                        <span>{{ .title }}</span>
-                    {{ end }}
+<!-- 遍历数据，统计每个 link 对应的文件数量 -->
+{{- range .Site.Data.goods.goods -}}
+    {{- if .link -}}
+        {{- $link := .link -}}
+        {{- $dir := printf "static/images/%s" $link -}}
+        {{- if (fileExists $dir) -}}
+            {{- $files := readDir $dir -}}
+            {{- $fileCount := len $files -}}
+            {{- $linkFileCounts = merge $linkFileCounts (dict $link $fileCount) -}}
+        {{- else -}}
+            {{- $linkFileCounts = merge $linkFileCounts (dict $link 0) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+<div class="goods">
+    {{- range .Site.Data.goods.goods -}}
+        <div class="goods-bankuai">
+            <!-- 图片部分，只有当 .link 存在时才包裹 <a> 标签 -->
+            {{- if .link -}}
+                <a href="{{ .link | absURL }}">
+                    <img loading="lazy" class="whitey" src="{{ .image }}" alt="{{ .title }}">
+                </a>
+            {{- else -}}
+                <img loading="lazy" class="whitey" src="{{ .image }}" alt="{{ .title }}">
+            {{- end -}}
+
+            <div class="goods-info">
+                <div class="goods-title">
+                    <div style="text-align: center;">
+                        <!-- 标题部分，点击后跳转到链接，并显示文件数量 -->
+                        {{- if .link -}}
+                            {{- $count := index $linkFileCounts .link | default 0 -}}
+                            <a href="{{ .link | absURL }}" class="goods-title-link">{{ .title }} ({{ $count }})</a>
+                        {{- else -}}
+                            <span>{{ .title }}</span>
+                        {{- end -}}
+                    </div>
+                </div>
+                <div class="goods-note">
+                    {{ .description }}
                 </div>
             </div>
-            <div class="goods-note">
-                {{ .description }}
-            </div>
         </div>
-    </div>
-
-    {{ end }}
+    {{- end -}}
 </div>
+
 
 <style>
     .whitey {
-        border-width: 5px;
+        border-width: 5px 5px 30px 5px; /* 上 右 下 左 */
         border-style: solid;
-        border-image: url("/images/stamp.png") 8 fill round;
+        border-color: rgb(255, 255, 255);
         width: 100%;
         height: auto;
         border-radius: 10px;
         box-sizing: border-box;
         transition: transform 0.3s ease; /* 设置过渡效果 */
     }
-    .whitey:hover {
-        transform: scale(1.1);
-    }
+
     .goods {
         display: flex;
         flex-wrap: wrap;
@@ -71,7 +86,9 @@
     }
 
     .goods-title {
-        margin-top: 0px;
+        margin-top: -25px;
+        font-size: 0.9rem;
+        font-weight: bold !important;
     }
 
     .goods-note {

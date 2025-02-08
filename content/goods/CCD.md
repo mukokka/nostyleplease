@@ -9,4 +9,4 @@ slug: '/ccd/'
 
 正在~~全力~~尽力加载中…
 
-{{< gallery "images/100SSCAM">}}
+{{< gallery "images/goods/ccd">}}

@@ -9,4 +9,4 @@ slug: '/koma/'
 
 正在~~全力~~尽力加载中…
 
-{{< gallery "images/koma">}}
+{{< gallery "images/goods/koma">}}
