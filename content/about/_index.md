@@ -14,6 +14,6 @@ comment: false
 
 - 博客运行日期已经达到四位数，但我依旧没有想好要用博客记录什么——只是当想要记录的东西出现时，我希望自己能够尽量记录下来。
 
-- 因为记录不及时而衍生的备忘录包括：[周记](https://weekly.iceco.icu/#/content/list)、书影音标记（[NeoDB](https://neodb.social/users/twoappleaday/)、[书架](https://docs.iceco.icu/#/read/list)）
+- 因为记录不及时而衍生的备忘录包括：周记、书影音标记（[NeoDB](https://neodb.social/users/twoappleaday/)、[书架](https://docs.iceco.icu/#/read/list)）
   
 - 已关闭RSS输出，请勿以任何形式存档我的博客。
