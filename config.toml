@@ -38,7 +38,7 @@ disableKinds = ["RSS"]
 
 [params]
   enableCarousel = true
-  description = 'WELCOME(´▽`ʃ♡ƪ)'
+  description = ''
   [params.theme_config]
     show_description  = true
     appearance        = "dark"

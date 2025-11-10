@@ -82,8 +82,14 @@ body {
 
 // 应用主题样式
 body[a="dark"] {
+  background-image: url("/images/flowertile.png"); /* 背景图路径 */
+  background-repeat: repeat;                   /* 重复平铺 */
+  background-size: auto;                       /* 原始大小，不缩放 */
+  background-attachment: fixed;                /* 页面滚动时背景不动（可选） */
+  background-color: #dff0fdb4;                   /* 背景底色，防止图片透明 */
+  /*
   background: 
-    /* 网格效果 */
+    网格效果
     repeating-linear-gradient(
       0deg,
       transparent,
@@ -98,12 +104,13 @@ body[a="dark"] {
       rgba(255, 255, 255, 0.1) 10px,
       rgba(255, 255, 255, 0.1) 20px
     ),
-    /* 现有的背景效果 */
+    现有的背景效果 
     linear-gradient(#f5e2a4 50%, rgba(255,255,255,0) 0) 0 0,
     radial-gradient(circle closest-side, #fae8af 53%, rgba(255,255,255,0) 0) 0 0,
     radial-gradient(circle closest-side, #fade96 50%, rgba(255,255,255,0) 0) 60px 0 rgb(150, 207, 138);
   background-size: 120px 220px;
   background-repeat: repeat, repeat, repeat-x, repeat-x, repeat-x;
+  */
 }
 
 body[a="light"] {
@@ -239,33 +246,111 @@ details[open] summary {
 /* 设置两栏布局 */
 .two-column-layout {
   display: flex;
-  gap: 20px; /* 两栏之间的间距 */
+  gap: 20px;                             /* 两栏之间的间距 */
   margin-top: 20px;
 }
 
 .two-column-layout .note {
-  flex: 1; /* note 栏的宽度 */
-  background-color: #f5d4d400; /* 背景颜色 */
-  padding: 0px; /* 内边距 */
-  border-radius: 10px; /* 圆角 */
-  border: 1px solid #e0e0e000; /* 边框 */
+  flex: 1;                               /* note 栏的宽度 */
+  background-color: #ffffffc4;         /* 背景颜色 */
+  padding: 5px 0px 5px 20px;           /* 上 右 下 左内边距 */
+  border-radius: 10px;                   /* 圆角 */
+  border: 2px solid #215697;           /* 边框 */
+  box-shadow: 5px 5px 0px #21569760;   /* 柔和阴影 */
 }
 
 .note a {
-  text-decoration: none; /* 移除链接下划线 */
-  text-shadow: #e0e0e000 0px 0px 0px !important;
+  text-decoration: none;                 /* 移除链接下划线 */
+  text-shadow: 1px 1px 0 #fff !important;
+}
+
+.note a::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  background-image: url("/images/flower.png"); /* 替换为你的图标 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.note a:hover::before {
+  transform: rotate(360deg) scale(1.05);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1.2);
 }
 
 .two-column-layout .content {
-  flex: 5; /* content 栏的宽度 */
+  flex: 5;                               /* content 栏的宽度 */
+  background-color: rgba(206,234,255,0.7);         /* 背景颜色 */
+  padding: 10px 0px 10px 10px;           /* 上 右 下 左内边距 */
+  border-radius: 10px;                   /* 圆角 */
+  border: 2px solid #215697;           /* 边框 */
+  box-shadow: 5px 5px 0px #21569760;   /* 柔和阴影 */
 }
+
+.two-column-layout .content> ul {
+  margin-right: 20px;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.678);         /* 背景颜色 */
+  padding: 20px 10px 10px 20px;           /* 上 右 下 左内边距 */
+  border-radius: 10px;                   /* 圆角 */
+  list-style: none !important;                      /* 去掉默认圆点 */
+}
+
+.two-column-layout .content> ul> ul {
+  list-style: none !important; /* 去掉默认圆点 */
+  padding-left: 22px; /* 留出花的空间 */
+}
+
+.post-item {
+  position: relative;
+  padding-left: 0px;      /* 小花占位 */
+}
+.post-item::before {
+  content: "";
+  display: inline-block;
+  width: 12px; 
+  height: 12px;
+  background-image: url("/images/flower.png"); /* 替换为你的图标 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.post-item:hover::before { 
+  transform: rotate(360deg) scale(1.05);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1.2);
+}
+
+.post-date { margin-right: 6px; color: #6b7a77; }   /* 日期与标题间距 */
+
+.message-board {
+  text-align: center;               /* 内容居中 */
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  padding: 10px 20px 5px 0px;           /* 上 右 下 左内边距 */
+  list-style: none;                      /* 去掉默认圆点 */
+}
+
+.message-board ul {
+  list-style: none;
+}
+
+
+
 
 footer {
   margin-top: auto;
   padding: 10px;
   background-color: #33333300;
-  color: #00000071;
+  color: #26548d;
   text-align: center;
+  font-weight: bold; 
+  font-size: 0.9rem;
 }
 
 .site-description {
@@ -333,6 +418,7 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   text-align: center;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;   /* 任选其一或两个都加 */
 }
 
 .pre-next-btn {
@@ -374,4 +460,16 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
 .text-center {
   text-align: center;
   font-size: 0.9rem;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+}
+
+.page-content article {
+  background: rgba(255, 255, 255, 0.651); /* 半透明白 */
+  border-radius: 12px;
+  padding: 5px 32px 10px 32px;
+  max-width: 800px; /* 控制正文宽度 */
 }
