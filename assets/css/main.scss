@@ -613,6 +613,20 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   padding: 5px 32px 10px 32px;
 }
 
+/* 📱手机端优化 */
+@media (max-width: 768px) {
+  .article2 {
+    padding: 5px 16px 10px 16px;
+  }
+
+  .article2_inside {
+    padding: 8px 12px;   /* 内层白底的左右内边距缩小 */
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
 
 .page-content ul {
   list-style: none; /* 去掉默认圆点 */
