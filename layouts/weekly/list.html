@@ -1,10 +1,16 @@
 {{ define "main" }}
 
     <div class="post-meta">
-        <p><a href="{{ .Site.BaseURL }}">首页</a> | <a href="{{ .Site.BaseURL }}about">关于</a> | <a href="{{ .Site.BaseURL }}posts">归档</a> | <a href="{{ .Site.BaseURL }}weekly">周记</a> | <a href="{{ .Site.BaseURL }}friends/">友邻</a> | <a href="{{ .Site.BaseURL }}goods">展柜</a> | <a href="{{ .Site.BaseURL }}others">画板</a></p>  
-    </div>
+        <p><a href="{{ .Site.BaseURL }}">首页</a></p> 
+        <p><a href="{{ .Site.BaseURL }}about">关于</a></p> 
+        <p><a href="{{ .Site.BaseURL }}posts">归档</a></p> 
+        <p><a href="{{ .Site.BaseURL }}weekly">周记</a></p> 
+        <p><a href="{{ .Site.BaseURL }}friends/">友邻</a></p> 
+        <p><a href="{{ .Site.BaseURL }}goods">展柜</a></p> 
+    </div>    
+  <div class="article2">
+  <div class="article2_inside">
   <h1>{{ .Title }}</h1>
-  
   {{ $weeklyPosts := where site.RegularPages "Params.categories" "intersect" (slice "weekly") }}
   {{ if gt (len $weeklyPosts) 0 }}
     {{ range .Pages.GroupByDate "2006" }}
@@ -28,7 +34,10 @@
         {{ end }}
     </ul>
     {{ end }}
+    </div>
+    </div>
   {{ else }}
     <p>No Weekly posts found.</p>
   {{ end }}
 {{ end }}
+

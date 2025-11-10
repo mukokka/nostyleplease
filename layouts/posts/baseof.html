@@ -5,7 +5,12 @@
         <main class="page-content" aria-label="Content">
             <div class="w">
                 <div class="post-meta">
-                    <p><a href="{{ .Site.BaseURL }}">首页</a> | <a href="{{ .Site.BaseURL }}about">关于</a> | <a href="{{ .Site.BaseURL }}posts">归档</a> | <a href="{{ .Site.BaseURL }}weekly">周记</a> | <a href="{{ .Site.BaseURL }}friends/">友邻</a> | <a href="{{ .Site.BaseURL }}goods">展柜</a> | <a href="{{ .Site.BaseURL }}others">画板</a></p> 
+                    <p><a href="{{ .Site.BaseURL }}">首页</a></p> 
+                    <p><a href="{{ .Site.BaseURL }}about">关于</a></p> 
+                    <p><a href="{{ .Site.BaseURL }}posts">归档</a></p> 
+                    <p><a href="{{ .Site.BaseURL }}weekly">周记</a></p> 
+                    <p><a href="{{ .Site.BaseURL }}friends/">友邻</a></p> 
+                    <p><a href="{{ .Site.BaseURL }}goods">展柜</a></p> 
                 </div>
                 {{- block "main" . }}{{- end }}
             </div>
@@ -22,3 +27,5 @@
 <!-- 鼠标点击特效，烟花效应 -->
 <script src="https://cdn.jsdelivr.net/gh/ZhaoUncle/image@main/static/mouse-click.js"></script>
 <canvas id="mouseClickCanvas" style="position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none;"></canvas>
+
+<!-- aaaaa blog-->

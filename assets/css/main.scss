@@ -177,14 +177,14 @@ code.has-jax {
 }
 
 blockquote {
-  background-color: #ffffff38;
-  border-left: 4px solid #6c9f47;
+  background-color: #bcebfe00;
+  border-left: 4px solid #7eb8d8f3;
   margin: 20px 0;
   padding: 5px 20px;
   font-style: normal;
   color: #203968;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  border: 2px dashed ;
 }
 
 img {
@@ -211,26 +211,73 @@ details[open] summary {
   padding-bottom: 0.5em;
 }
 
-.post-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color:#0056b3;
-  text-align: left !important;
-}
+
 
 /* 设置 post-meta 中超链接的默认颜色 */
-.post-meta a {
-  color: #0056b3 !important; /* 例如，设置为蓝色 */
-  text-decoration: none; /* 去除下划线 */
-  text-shadow: none;
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;          /* 自动换行 */
+  justify-content: center;  /* 居中对齐 */
+  gap: 12px;                 /* 按钮之间留点距离 */
+
+  background: rgba(255, 255, 255, 0.601);
+  border: 2px solid #13417e;
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border: 2px dashed #215697;           /* 边框 */
+  box-shadow: 5px 5px 0px #21569760;   /* 柔和阴影 */
+
 }
 
-/* 设置 post-meta 中超链接鼠标悬停时的颜色 */
+.post-meta p {
+  margin: 0;
+}
+
+.post-meta a {
+  text-shadow: none;
+  display: inline-block;
+
+  border-radius: 6px;
+  background: #ceeaff00;
+  border: 0px dashed #13417e;
+  box-shadow: 2px 2px 2px #21569740;
+  padding: 6px 10px;
+
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
 .post-meta a:hover {
-  color: #0056b3; /* 例如，设置为深蓝色 */
-  font-weight: bold; /* 确保文本加粗 */
-  text-shadow: #3f5d808f 0px 0px 20px;
+  background: #a7d3ff;
+  transform: translateY(-2px);
+}
+
+.post-meta a:hover::before { 
+  transform: rotate(360deg) scale(1.05);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1.2);
+}
+
+
+
+.post-meta a::before {
+  content: "";
+  display: inline-block;
+  margin-right: 6px;
+  width: 12px;
+  height: 12px;
+  background-image: url("/images/flower.png"); /* 替换成你的小花图 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(10deg);
+  opacity: 0.9;
+  vertical-align: middle;
 }
 
 .w {
@@ -248,6 +295,65 @@ details[open] summary {
   display: flex;
   gap: 20px;                             /* 两栏之间的间距 */
   margin-top: 20px;
+}
+
+/* 手机端（小屏幕）自动改为上下布局 */
+@media (max-width: 768px) {
+  .two-column-layout {
+    flex-direction: column;  /* 改为上下排列 */
+    gap: 12px;               /* 缩小间距 */
+    margin-top: 10px;
+  }
+
+  .two-column-layout .note {
+    order: 1;                /* 如果你想菜单在下方可以改成1或2 */
+  }
+
+  .two-column-layout .content {
+    order: 2;
+  }
+}
+
+/* 手机端：导航横向排列 */
+@media (max-width: 768px) {
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .two-column-layout .note {
+    display: flex;
+    flex-wrap: wrap;          /* 自动换行 */
+    justify-content: center;  /* 居中对齐 */
+    gap: 10px;                 /* 按钮之间留点距离 */
+    background: rgba(255,255,255,0.9);
+    border: 2px solid #13417e;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .two-column-layout .note p {
+    margin: 0;
+  }
+
+  .two-column-layout .note a {
+    margin-bottom: 6px;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #ceeaff00;
+    color: #215697;
+    border: 0px solid #13417e;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 2px 2px 0 #21569740;
+    transition: all 0.2s;
+  }
+
+  .two-column-layout .note a:hover {
+    background: #a7d3ff;
+    transform: translateY(-2px);
+  }
 }
 
 .two-column-layout .note {
@@ -419,10 +525,11 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;   /* 任选其一或两个都加 */
+  
 }
 
 .pre-next-btn {
-  font-size: 1rem;
+  font-size: 1rem !important;
   transition: font-size 0.3s ease;
   /* 添加平滑过渡效果 */
 }
@@ -468,8 +575,66 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
 }
 
 .page-content article {
-  background: rgba(255, 255, 255, 0.651); /* 半透明白 */
+  background-color: rgba(206,234,255,0.7); 
   border-radius: 12px;
   padding: 5px 32px 10px 32px;
   max-width: 800px; /* 控制正文宽度 */
+  border: 2px solid #215697;           /* 边框 */
+  box-shadow: 5px 5px 0px #21569760;   /* 柔和阴影 */
+}
+
+.page-content .article_inside {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.678);         /* 背景颜色 */
+  border-radius: 12px;
+  padding: 5px 32px 10px 32px;
+}
+
+.article2 {
+  background-color: rgba(206,234,255,0.7); 
+  border-radius: 12px;
+  padding: 5px 32px 10px 32px;
+  max-width: 800px; /* 控制正文宽度 */
+  border: 2px solid #215697;           /* 边框 */
+  box-shadow: 5px 5px 0px #21569760;   /* 柔和阴影 */
+}
+
+
+.article2_inside {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.678);         /* 背景颜色 */
+  border-radius: 12px;
+  padding: 5px 32px 10px 32px;
+}
+
+
+.page-content ul {
+  list-style: none; /* 去掉默认圆点 */
+  padding-left: 1.6em; /* 保留缩进 */
+}
+
+.page-content ul li {
+  position: relative;
+  padding-left: 1.4em; /* 给小花留空间 */
+  margin-bottom: 0.4em;
+}
+
+.page-content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 12px;
+  height: 12px;
+  background-image: url("/images/flower.png"); /* 替换成你的小花图 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(10deg);
+  opacity: 0.9;
 }

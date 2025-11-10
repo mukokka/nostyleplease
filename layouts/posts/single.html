@@ -1,5 +1,6 @@
 {{ define "main" }}
 <article>
+    <div class="article_inside">
     <h1>{{ .Title }}</h1>
 
     <div class="postmeta">
@@ -23,10 +24,18 @@
             <a class="pre-next-btn bg" href="{{.Permalink}}">{{ .Title }} >></a>
         {{end}}
     </div>
+    </div>
+
+    
 
     {{ if .Params.comment }}
-        {{ partial "comment.html" . }}
+        <div class="article_inside">
+        {{ partial "comment.html" . }}\
+        </div>
     {{ end }}
-    {{ partial "footer.html" . }}
+
 </article>
+
+
+    {{ partial "footer.html" . }}
 {{ end }}
