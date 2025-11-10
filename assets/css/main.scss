@@ -219,7 +219,8 @@ details[open] summary {
   display: flex;
   flex-wrap: wrap;          /* 自动换行 */
   justify-content: center;  /* 居中对齐 */
-  gap: 10px;                 /* 按钮之间留点距离 */
+  column-gap: 15px; /* 按钮之间左右距离 */
+  row-gap: 0px;    /* 自动换行后上下距离 */
 
   background: rgba(255, 255, 255, 0.601);
   border: 2px solid #13417e;
@@ -227,13 +228,15 @@ details[open] summary {
 
   margin-bottom: 20px;
   margin-top: 10px;
+
   border: 2px dashed #215697;           /* 边框 */
   box-shadow: 5px 5px 0px #21569760;   /* 柔和阴影 */
 
 }
 
 .post-meta p {
-  margin: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .post-meta a {
@@ -248,8 +251,10 @@ details[open] summary {
 
   font-weight: 600;
   font-size: 0.95rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
   transition: all 0.2s;
 }
 
@@ -278,6 +283,8 @@ details[open] summary {
 }
 
 .w {
+  box-sizing: border-box;   /* 让 padding 计入总宽度，避免页与页出现 2rem 差 */
+  width: 100%;              /* 占满父容器，再用 max-width 卡住 */
   max-width: 640px;
   margin: 0 auto;
   padding: 4rem 2rem;
@@ -374,6 +381,7 @@ details[open] summary {
   height: 12px;
   margin-right: 6px;
   background-image: url("/images/flower.png"); /* 替换为你的图标 */
+  transform: rotate(10deg);
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
@@ -417,6 +425,7 @@ details[open] summary {
   width: 12px; 
   height: 12px;
   background-image: url("/images/flower.png"); /* 替换为你的图标 */
+  transform: rotate(10deg);
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
@@ -612,25 +621,25 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
 
 /* 📱手机端优化 */
 @media (max-width: 768px) {
-    .article {
-    padding: 10px 16px 10px 16px;
+  .page-content article {
+    padding: 10px 6px 10px 6px;
 
   }
 
-  .article_inside {
-    padding: 8px 12px;   /* 内层白底的左右内边距缩小 */
-    margin-top: 5px;
-    margin-bottom: 5px;
+  .page-content .article_inside {
+    padding: 5px 12px;   /* 内层白底的左右内边距缩小 */
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .article2 {
-    padding: 10px 16px 10px 16px;
+    padding: 10px 6px 10px 6px;
   }
 
   .article2_inside {
-    padding: 8px 12px;   /* 内层白底的左右内边距缩小 */
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 5px 12px;   /* 内层白底的左右内边距缩小 */
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -657,4 +666,9 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   background-repeat: no-repeat;
   transform: rotate(10deg);
   opacity: 0.9;
+}
+
+.page-content ul li:hover::before { 
+  transform: rotate(360deg) scale(1.05);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1.2);
 }
