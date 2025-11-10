@@ -616,12 +616,12 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
 /* 📱手机端优化 */
 @media (max-width: 768px) {
     .article {
-    padding: 16px;
+    padding: 8px 16px;   /* 外层留白更窄一点 */
 
   }
 
   .article_inside {
-    padding: 10px;   /* 内层白底的左右内边距缩小 */
+    padding: 8px 12px;   /* 内层白底的左右内边距缩小 */
     margin-right: 2px;
     margin-left: 2px;
     margin-top: 5px;
@@ -629,15 +629,12 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   }
 
   .article2 {
-    padding: 16px;
+    padding: 8px 16px;   /* 外层留白更窄一点 */
   }
 
   .article2_inside {
-    padding: 10px;   /* 内层白底的左右内边距缩小 */
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 8px 12px;   /* 内层白底的左右内边距缩小 */
+    margin: 12px 0;      /* 去掉多余间距 */
   }
 }
 
