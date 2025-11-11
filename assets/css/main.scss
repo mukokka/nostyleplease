@@ -177,14 +177,18 @@ code.has-jax {
 }
 
 blockquote {
-  background-color: #bcebfe00;
-  border-left: 4px solid #7eb8d8f3;
+  background-color: #f7f2d4a2;
+  background-image:
+    linear-gradient(0deg, rgba(245, 185, 106, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 185, 106, 0.25) 1px, transparent 1px);
+  background-size: 20px 20px; /* 网格间距 */
+  border-left: 6px solid #f5b96ade;
   margin: 20px 0;
   padding: 5px 20px;
   font-style: normal;
   color: #203968;
   border-radius: 6px;
-  border: 2px dashed ;
+  box-shadow: 5px 5px 0px #70571644;
 }
 
 img {

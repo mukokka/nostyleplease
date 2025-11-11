@@ -1,20 +1,33 @@
-{{ if site.Params.theme_config.isShowFooter }}
-    {{ $footerContent := readFile "layouts/footer.md" }}
-    {{ if and $footerContent (ne $footerContent "") }}
-        {{ $footerContent | markdownify }}
-    {{ else }}
-        <footer class="site-footer">
-            <p>&copy; 2022-{{ now.Format "2006" }} · <span id="site-running-days"></span> Days</p>
-        </footer>
-        <script>
-            function calculateRunningTime() {
-                const startDate = new Date("2022-05-02"); // 博客启动日期
-                const today = new Date();
-                const timeDiff = today - startDate;
-                const days = Math.floor(timeDiff / (1000 * 3600 * 24));
-                document.getElementById("site-running-days").innerText = days;
-            }
-            window.onload = calculateRunningTime;
-        </script>
-    {{ end }}
-{{ end }}
+<footer class="site-footer">
+  <p>&copy; 2022-{{ now.Format "2006" }} · 
+    <span id="site-running-yd"></span>
+  </p>
+</footer>
+
+<script>
+  (function () {
+    // 博客启动日期（本地时间的零点，避免时区/夏令时影响）
+    const start = new Date(2022, 4, 2); // 注意：月份从0开始，4=五月
+
+    // 取今天的本地零点
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    // 最近的周年日：把 start 的“月日”映射到今年
+    let anniversary = new Date(today.getFullYear(), start.getMonth(), start.getDate());
+
+    // 如果今年的周年日还没到，就用去年的周年日
+    if (anniversary > today) {
+      anniversary = new Date(today.getFullYear() - 1, start.getMonth(), start.getDate());
+    }
+
+    // 已满的年数
+    const years = anniversary.getFullYear() - start.getFullYear();
+
+    // 去掉整年后的剩余天数
+    const days = Math.floor((today - anniversary) / 86400000);
+
+    // 输出形如“X 年 Y 天”
+    document.getElementById('site-running-yd').textContent = `${years} 年 ${days} 天`;
+  })();
+</script>

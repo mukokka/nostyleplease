@@ -21,8 +21,6 @@ slug: 'friends/'
 
 > 名称：Muko
 > 
-> 地址：https://oaad.iceco.icu/
-> 
-> 头像：https://oaad.iceco.icu/avater.png
+> 地址：https://iceco.vercel.app
 > 
 > 简介：我以前没得选，现在我想做个绝望的文盲。

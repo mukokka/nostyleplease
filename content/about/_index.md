@@ -10,10 +10,20 @@ comment: false
 > 
 > ——《地下室手记》
 
-- 本站由[Hugo](https://gohugo.io/)驱动，主题改自[nostyleplease](https://github.com/hanwenguo/hugo-theme-nostyleplease)，由[vercel](https://vercel.com/)部署，评论系统使用[waline](https://waline.js.org/)，favicon来自[Flaticon](https://www.flaticon.com/)。书架和周记使用[docsify](https://docsify.js.org/#/zh-cn/)搭建，
+### 关于博客
 
-- 博客运行日期已经达到四位数，但我依旧没有想好要用博客记录什么——只是当想要记录的东西出现时，我希望自己能够尽量记录下来。
+- 本站由[Hugo](https://gohugo.io/)驱动，主题改自[nostyleplease](https://github.com/hanwenguo/hugo-theme-nostyleplease)，配色抄自[neopost](https://github.com/salatine/neopost)——非常可爱😭，但是博主本人在更改主题重新配置短代码前犹豫再三选择了抄走配色配饰。
 
-- 因为记录不及时而衍生的备忘录包括：周记、书影音标记（[NeoDB](https://neodb.social/users/twoappleaday/)、[书架](https://docs.iceco.icu/#/read/list)）
-  
+- 博主书影音标记未半而中道崩殂的遗迹在：（[NeoDB](https://neodb.social/users/twoappleaday/)、[书架](https://docs.iceco.icu/#/read/list)）
+
 - 已关闭RSS输出，请勿以任何形式存档我的博客。
+
+### 关于博主
+
+- 活跃社交媒体时曾以多个假名示人：酸酸 / mkkk / 小红……归来被叫得最多的还是，呃，宝宝……
+
+- 我想mbti真的重要，在无法自我介绍的时候就这样给自己贴上大家都熟知的标签。非常i非常p，但是ns/tf都处于半半的程度，甚至其实不明白为什么n和s是对立的，这又不是方向？
+
+- 0国语言拥有者。博客已经是我最努力尝试讲清楚事情的地方了。
+
+- {{< imgwidth src="/images/about/about.JPG" width="100%" alt="" >}}
