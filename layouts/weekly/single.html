@@ -1,5 +1,17 @@
 {{ define "main" }}
 
+{{ $twemojiJS := resources.Get "js/twemoji.min.js" }}
+<script src="{{ $twemojiJS.RelPermalink }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    twemoji.parse(document.body, {
+    base: '{{ "/my-emojis/" | relURL }}', 
+    folder: 'svg', 
+    ext: '.svg' 
+    });
+    });
+</script>
+
 <div class="post-meta">
     <p><a href="{{ .Site.BaseURL }}">首页</a></p> 
     <p><a href="{{ .Site.BaseURL }}about">关于</a></p> 

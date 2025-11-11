@@ -1,4 +1,4 @@
-baseURL = "https://nostyleplease.vercel.app/"
+baseURL = "https://iceco.vercel.app"
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-CN"
 theme = "nostyleplease"

@@ -676,3 +676,18 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   transform: rotate(360deg) scale(1.05);
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1.2);
 }
+
+img.emoji {
+  height: 1.2em; /* 如果需要像毛象一样大，则height和width都设置为1.8em */
+  width: 1.2em;
+  display: inline;
+  margin: 0.15em; 
+  vertical-align: -0.2em; /* 表情在文字间对齐可以微调 */
+  border-radius: 0px;
+  transition: transform 0.2s ease, height 0.2s ease, width 0.2s ease;
+  }
+
+img.emoji:hover {
+  height: 2.4em; /* 如果需要像毛象一样大，则height和width都设置为1.8em */
+  width: 2.4em;
+  }

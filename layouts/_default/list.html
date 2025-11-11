@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+
+
+{{ $twemojiJS := resources.Get "js/twemoji.min.js" }}
+<script src="{{ $twemojiJS.RelPermalink }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    twemoji.parse(document.body, {
+    base: '{{ "/my-emojis/" | relURL }}', 
+    folder: 'svg', 
+    ext: '.svg' 
+    });
+    });
+</script>
+
 <html lang="{{ $.Site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
