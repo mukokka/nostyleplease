@@ -7,6 +7,7 @@ slug: '/ya/'
 
 ---
 
-正在~~全力~~尽力加载中…
-
-{{< gallery "images/goods/ya">}}
+{{< gallery 
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/yaya/1633008118677.png"
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/yaya/1633245784000.jpeg"
+>}}

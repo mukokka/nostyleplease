@@ -33,7 +33,7 @@
                         <!-- 标题部分，点击后跳转到链接，并显示文件数量 -->
                         {{- if .link -}}
                             {{- $count := index $linkFileCounts .link | default 0 -}}
-                            <a href="{{ .link | absURL }}" class="goods-title-link">{{ .title }} ({{ $count }})</a>
+                            <a href="{{ .link | absURL }}" class="goods-title-link">{{ .title }}</a>
                         {{- else -}}
                             <span>{{ .title }}</span>
                         {{- end -}}

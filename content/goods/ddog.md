@@ -7,6 +7,7 @@ slug: '/ddog/'
 
 ---
 
-正在~~全力~~尽力加载中…
-
-{{< gallery "images/goods/ddog">}}
+{{< gallery 
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/ddog/KakaoTalk_20250202_222532874_05.jpg"
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/ddog/KakaoTalk_20250202_222532874_06.jpg"
+    >}}

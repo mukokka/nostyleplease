@@ -7,6 +7,7 @@ slug: '/potadog/'
 
 ---
 
-正在~~全力~~尽力加载中…
-
-{{< gallery "images/goods/potadog">}}
+{{< gallery 
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/potadog/KakaoTalk_20250202_222532874_03.jpg"
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/potadog/KakaoTalk_20250202_222532874_02.jpg"
+>}}

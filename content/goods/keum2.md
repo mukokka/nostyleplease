@@ -7,6 +7,8 @@ slug: '/keum2/'
 
 ---
 
-正在~~全力~~尽力加载中…
-
-{{< gallery "images/goods/keum2">}}
+{{< gallery 
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/keum2/KakaoTalk_20250202_222532874_12.jpg"
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/keum2/KakaoTalk_20250202_222532874_23.jpg"
+    "https://raw.githubusercontent.com/mukokka/blog-images/main/goods/keum2/KakaoTalk_20250202_222532874_24.jpg"
+>}}
