@@ -31,3 +31,14 @@
     document.getElementById('site-running-yd').textContent = `${years} 年 ${days} 天`;
   })();
 </script>
+
+
+<script src="https://immmmm.com/view-image.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  // 初始化一次即可
+  if (window.ViewImage) {
+    ViewImage.init('.gallery-photo img, img.zoomable, img');
+  }
+});
+</script>

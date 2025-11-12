@@ -3,9 +3,17 @@
     {{ $alt := .Get "alt" | default "" }}
     
     <div style="text-align: center;">
-      <img src="{{ $src }}" alt="{{ $alt }}" style="width: {{ $width }}; display: block; margin: 0 auto;" />
+      <img class="zoomable" loading="lazy" decoding="async"
+           src="{{ $src }}" alt="{{ $alt }}" style="width: {{ $width }}; display: block; margin: 0 auto;" />
       {{ if $alt }}
-        <div style="margin-top: 5px; margin-bottom: 5px; font-style: normal; text-align: center;font-size: 0.9rem;">{{ $alt }}</div>
+        <div style="margin-top: 5px; 
+              margin-bottom: 5px; 
+              font-style: normal; 
+              text-align: center;
+              font-size: 0.8rem;
+              font-weight:bold;
+              color:#12131688;"
+              >
+              {{ $alt }}</div>
       {{ end }}
     </div>
-    

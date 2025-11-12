@@ -568,6 +568,22 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   }
 }
 
+/* 桌面端浮动 TOC */
+.post-toc {
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px dashed #89a;
+  border-radius: 12px;
+  padding: 10px 10px;
+  margin: 20px 0;
+  font-size: 0.95rem;
+}
+
+/* 默认隐藏移动 TOC */
+.post-toc-mobile {
+  display: none;
+}
+
+
 @media only screen and (max-width: 1224px) {
   .post-toc {
     display: none;
@@ -691,3 +707,130 @@ img.emoji:hover {
   height: 2.4em; /* 如果需要像毛象一样大，则height和width都设置为1.8em */
   width: 2.4em;
   }
+
+  .accordion {
+  border: none, !important;
+  background-color: none;
+  transition: all 0.3s ease;
+  padding: 0px;
+}
+
+.accordion[open] summary {
+  background-color: none;
+}
+
+.accordion summary {
+  display: flex;
+  align-items: center;
+}
+
+.accordion summary::marker {
+  display: none;
+}
+
+.accordion summary::before {
+  content: "▸";
+  font-size: 1.5rem; /* 调整这里，比如 1.5rem、2rem 都可以 */
+  margin-right: 0.5rem;
+  color: #343f55;
+  transition: transform 0.3s ease;
+}
+
+.accordion[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* db-card -------- start */
+.db-card {
+  margin: 1rem 1.5rem;
+  background: var(--color-codebg);
+  border-radius: 7px;
+  box-shadow: 5px 5px 3px 0 #29357a53;
+}
+
+.db-card-subject {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+  padding: 12px;
+  position: relative;
+}
+
+.dark .db-card {
+  background: var(--color-codebg);
+}
+
+.db-card-content {
+  flex: 1 1 auto;
+}
+
+.db-card-post {
+  width: auto;
+  margin-right: 15px;
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.db-card-title {
+  margin-bottom: 3px;
+  font-size: 15px;
+  color: var(--card-text-color-main);
+  font-weight: bold;
+}
+
+.db-card-title a {
+  text-decoration: none!important;
+}
+
+.db-card-abstract,
+.db-card-comment {
+  font-size: 13px;
+  overflow: auto;
+  max-height: 6rem;
+  color: var(--card-text-color-main);
+}
+
+.db-card-cate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #c7e1c3;
+  [data-theme='dark'] & {
+    background: #61835c;
+  }
+  padding: 1px 8px;
+  font-size: small;
+  font-style: italic;
+  border-radius: 0 8px 0 8px;
+  text-transform: capitalize;
+}
+
+.db-card-post img {
+  width: auto;
+  height: 120px!important;
+  border-radius: 4px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .db-card {
+      margin: 0.8rem 1rem;
+  }
+
+  .db-card-comment {
+      display: none;
+  }
+
+  .db-card-title {
+      font-size: 13px;
+  }
+  .rating {
+      font-size: 12px;
+  }
+  .db-card-abstract,
+.db-card-comment {
+  font-size: 11px;
+}
+}
+/* db-card -------- end */
