@@ -120,6 +120,19 @@ body[a="light"] {
   background-size:50px 50px;
 }
 
+h1 {
+  font-size: 1.5rem;         /* 标题大小 */
+}
+
+/* 依次递减的标题层级 */
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
 h2, h3, h4, h5, h6 { margin-top: 1.5rem; }
 
 p { margin: 1rem 0; }
