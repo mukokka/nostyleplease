@@ -10,7 +10,7 @@ slug: 'friends/'
 
 - [小球飞鱼](https://mantyke.icu/)：朋友叫我塔塔，格里达尼亚的小仙女训练家，现居穹顶皓天。
 - [Missing不想睡](https://hugo-missingid.vercel.app/)：和我一起做赛博宵夜吧!
-- [蝴蝶曾在此处](https://write.c7.io/tyou/)：strength can be built.
+- [蝴蝶曾在此处](https://changingmoments.one/)：strength can be built.
 - [Mengru](https://mengru.space/)：Mengru 在互联网上的小小角落。
 - [谢谢所有的鱼](https://gregueria.icu/)：您首页的奶牛猫图片转发大使
 - [咖喱](https://joysblog.vercel.app/)：即使埋藏在内心也没关系
