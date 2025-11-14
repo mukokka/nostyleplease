@@ -1,0 +1,13 @@
+    {{ $src := .Get "src" }}
+    {{ $width := .Get "width" | default "100%" }}
+    {{ $alt := .Get "alt" | default "" }}
+    
+    <div class="imgwidth-item" style="width: {{ $width }};">
+    <img class="zoomable" loading="lazy" decoding="async"
+        src="{{ $src }}" alt="{{ $alt }}" />
+    {{ if $alt }}
+        <div class="imgwidth-caption">
+        {{ $alt }}
+        </div>
+    {{ end }}
+    </div>

@@ -34,7 +34,9 @@
 
     {{ .Content }} 
     {{ if .Params.comment }}
+        <div class="comment_inside">
         {{ partial "comment.html" . }}
+        </div>
     {{ end }}
     </div>
 </div>

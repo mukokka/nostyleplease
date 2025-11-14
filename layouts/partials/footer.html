@@ -38,7 +38,9 @@
 document.addEventListener("DOMContentLoaded", function(){
   // 初始化一次即可
   if (window.ViewImage) {
-    ViewImage.init('.gallery-photo img, img.zoomable, .article_inside img, .article2_inside img');
+    ViewImage.init(
+      '.gallery-photo img, img.zoomable, .article_inside img:not(.emoji), .article2_inside img:not(.emoji)'
+    );
   }
 });
 </script>
