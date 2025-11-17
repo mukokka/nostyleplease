@@ -12,7 +12,7 @@ comment: false
 
 ### 关于博客
 
-- 本站由[Hugo](https://gohugo.io/)驱动，主题改自[nostyleplease](https://github.com/hanwenguo/hugo-theme-nostyleplease)，配色抄自[neopost](https://github.com/salatine/neopost)——非常可爱😭，但是博主本人在更改主题重新配置短代码前犹豫再三选择了抄走配色配饰。
+- 本站由[Hugo](https://gohugo.io/)驱动，主题改自[nostyleplease](https://github.com/hanwenguo/hugo-theme-nostyleplease)，像素爱心来自[ frelayasia](https://www.flaticon.com/search?style_id=1222&author_id=2984&word=pixel+art&type=standard)
 
 - 博主书影音标记未半而中道崩殂的遗迹在：（[NeoDB](https://neodb.social/users/twoappleaday/)、[书架](https://docs.iceco.icu/#/read/list)）
 

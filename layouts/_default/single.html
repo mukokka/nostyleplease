@@ -22,22 +22,24 @@
 </div>
 
 <div class="article2">
-<div class="article2_inside">
+    <div class="article2_inside">
 
-    <h1>{{ .Title }}</h1>
+        <h1>{{ .Title }}</h1>
 
-    {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
-    {{ end }}
-
+        {{ if .Params.toc }}
+            <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+                {{ .TableOfContents }}
+            </aside>
+        {{ end }}
     {{ .Content }} 
+
+    </div>
+
+
     {{ if .Params.comment }}
         <div class="comment_inside">
         {{ partial "comment.html" . }}
         </div>
     {{ end }}
-    </div>
 </div>
 {{ end }}
