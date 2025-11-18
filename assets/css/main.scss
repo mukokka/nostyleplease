@@ -6,7 +6,7 @@
 
   a {
     color: $--link-color;
-    &:visited { color: $--visited-link-color; }
+    &:visited { color: $--link-color; }
   }
 
   details {
@@ -51,7 +51,7 @@
 @mixin dark-appearance {
   @include theme(
     #fdfaf6,   // 背景底：奶油白
-    #163328,   // 主文本：深绿
+    #381a14,   // 主文本：深绿
     #6b7c71,   // 次文本：灰绿
     #832e54,   // visited 链接：偏深粉
     #832e54,   // visited 链接：偏深粉
@@ -91,8 +91,7 @@ body {
 body[a="dark"] {
   background-image: url("/images/v752-ning-21b.jpg"); /* 背景图路径 */
   background-repeat: no-repeat;                   /* 重复平铺 */
-  background-size: 1500px auto !important;      /* 控制单个图案大小 */
-  background-size: auto;                       /* 原始大小，不缩放 */
+  background-size: 1700px auto;      /* 控制单个图案大小 */
   background-position: top left;
   background-color: #dff0fd00;                   /* 背景底色，防止图片透明 */
   background-attachment: fixed;
@@ -121,6 +120,17 @@ body[a="dark"] {
   background-repeat: repeat, repeat, repeat-x, repeat-x, repeat-x;
   */
 }
+
+/* 手机端背景优化 */
+@media (max-width: 768px) {
+  body {
+    background-size: 1500px auto !important; /* 缩小图案 */
+    background-position: top left !important; /* 居中，不偏 */
+    background-repeat: no-repeat !important; /* 更自然地拼接 */
+    background-attachment: fixed;
+  }
+}
+
 
 body[a="light"] {
   background-image: url("/images/flowertile.png"); /* 背景图路径 */
@@ -161,10 +171,10 @@ a:hover {
 
 hr {
   border: none;                     /* 去掉默认线 */
-  height: 40px;                     /* 根据水滴图片高度可调 */
-  margin-left:10px;
-  margin-right:10px;
-  background-image: url("/images/divider11.png"); /* ← 换成你的路径 */
+  height: 35px;                     /* 根据水滴图片高度可调 */
+  margin-left:15px;
+  margin-right:15px;
+  background-image: url("/images/divider12.png"); /* ← 换成你的路径 */
   background-repeat: no-repeat;      /* 水平平铺 */
   background-position: center;
   background-size: contain;         /* 保持原图比例 */
@@ -275,9 +285,9 @@ details[open] summary {
 
   border-radius: 6px;
   background: #ffffffce;
-  border: none;
-  box-shadow: 2px 2px 2px #bd5c3360;
+  box-shadow: 2px 2px 2px #3378bd60;
   padding: 6px 10px;
+  border: 2px dashed #262848;
 
   font-weight: 600;
   font-size: 0.95rem;
@@ -288,34 +298,59 @@ details[open] summary {
   transition: all 0.2s;
 }
 
-  .post-meta > *:nth-child(1) a {
-    transform: rotate(-3deg) translateY(-4px) !important;
-  }
+.post-meta > *:nth-child(1) a {
+  transform: rotate(-3deg) translateY(-4px) !important;
+  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-size: 1000px auto !important; /* 缩小图案 */
+  background-position: center !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
+}
 
-  /* 第2个按钮 */
-  .post-meta > *:nth-child(2) a {
-    transform: rotate(2deg) translateY(6px) !important;
-  }
+.post-meta > *:nth-child(2) a {
+  transform: rotate(2deg) translateY(6px) !important;
+  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-size: 100px auto !important; /* 缩小图案 */
+  background-position: left !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
+}
 
-  /* 第3个按钮 */
-  .post-meta > *:nth-child(3) a {
-    transform: rotate(-1deg) translateY(3px) !important;
-  }
+.post-meta > *:nth-child(3) a {
+  transform: rotate(-1deg) translateY(3px) !important;
+  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-size: 100px auto !important; /* 缩小图案 */
+  background-position: right !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
+}
 
-  /* 第4个按钮 */
-  .post-meta > *:nth-child(4) a {
-    transform: rotate(3deg) translateY(-5px) !important;
-  }
+.post-meta > *:nth-child(4) a {
+  transform: rotate(3deg) translateY(-5px) !important;
+  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-size: 100px auto !important; /* 缩小图案 */
+  background-position: top center !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
+}
 
-  /* 第5个按钮 */
-  .post-meta > *:nth-child(5) a {
-    transform: rotate(-2deg) translateY(5px) !important;
-  }
+.post-meta > *:nth-child(5) a {
+  transform: rotate(-2deg) translateY(5px) !important;
+  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-size: 100px auto !important; /* 缩小图案 */
+  background-position: top left !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
+}
 
-  /* 第6个按钮 */
-  .post-meta > *:nth-child(6) a {
-    transform: rotate(1.5deg) translateY(-3px) !important;
-  }
+.post-meta > *:nth-child(6) a {
+  transform: rotate(1.5deg) translateY(-3px) !important;
+  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-size: 100px auto !important; /* 缩小图案 */
+  background-position: top right !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
+}
 
 .post-meta a:hover {
   transform: translateY(-2px);
@@ -473,7 +508,6 @@ details[open] summary {
   font-size: 0.95rem;
   box-shadow: 2px 2px 2px #bd5c3360;
   transition: all 0.2s;
-
 }
 
 .note a::before {
@@ -497,31 +531,61 @@ details[open] summary {
 /* 第1个按钮 */
 .note > *:nth-child(1) a {
   transform: rotate(-3deg) translateX(-4px);
+  background-image: url("/images/colorful-watercolor-brush-strokes.jpg"); /* 背景图路径 */
+  background-size: 300px auto !important; /* 缩小图案 */
+  background-position: center !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
 }
 
 /* 第2个按钮 */
 .note > *:nth-child(2) a {
   transform: rotate(2deg) translateX(6px);
+  background-image: url("/images/colorful-watercolor-brush-strokes.jpg"); /* 背景图路径 */
+  background-size: 300px auto !important; /* 缩小图案 */
+  background-position: left !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
 }
 
 /* 第3个按钮 */
 .note > *:nth-child(3) a {
   transform: rotate(-1deg) translateX(3px);
+  background-image: url("/images/colorful-watercolor-brush-strokes.jpg"); /* 背景图路径 */
+  background-size: 280px auto !important; /* 缩小图案 */
+  background-position: right !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
 }
 
 /* 第4个按钮 */
 .note > *:nth-child(4) a {
   transform: rotate(3deg) translateX(-5px);
+  background-image: url("/images/colorful-watercolor-brush-strokes.jpg"); /* 背景图路径 */
+  background-size: 310px auto !important; /* 缩小图案 */
+  background-position: top center !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
 }
 
 /* 第5个按钮 */
 .note > *:nth-child(5) a {
   transform: rotate(-2deg) translateX(4px);
+  background-image: url("/images/colorful-watercolor-brush-strokes.jpg"); /* 背景图路径 */
+  background-size: 300px auto !important; /* 缩小图案 */
+  background-position: top left !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
 }
 
 /* 第6个按钮 */
 .note > *:nth-child(6) a {
   transform: rotate(1.5deg) translateX(-3px);
+  background-image: url("/images/colorful-watercolor-brush-strokes.jpg"); /* 背景图路径 */
+  background-size: 300px auto !important; /* 缩小图案 */
+  background-position: top right !important; /* 居中，不偏 */
+  background-repeat: no-repeat !important; /* 更自然地拼接 */
+  background-attachment: fixed;
 }
 
 
@@ -699,11 +763,13 @@ strong, b {
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: none;     /* 取消阴影 */
+  color:#381a14 !important;
+
 }
 
 .post-title a:hover {
   font-weight: bold; /* 确保文本加粗 */
-  text-shadow: #1d6ade8d 0px 0px 10px;
+  text-shadow: #decb1d8d 0px 0px 10px;
 }
 
 .post-categories {
@@ -792,12 +858,19 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
 
 /* 桌面端浮动 TOC */
 .post-toc {
-  background: rgba(255, 255, 255, 0.7);
-  border: 2px dashed rgb(172, 138, 98);
   border-radius: 12px;
   padding: 10px 5px;
   margin: 10px 0;
   font-size: 0.95rem;
+
+  border: 2px dashed #262848;
+  border-radius: 20px 24px 23px 27px;
+  box-shadow: 5px 5px 2px #1e374b60;   /* 柔和阴影 */
+  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-size: 700px auto !important; /* 缩小图案 */
+  background-position: top center !important; /* 居中，不偏 */
+  background-repeat: repeat !important; /* 更自然地拼接 */
+  background-attachment: scroll;
 }
 
 /* 默认隐藏移动 TOC */
@@ -832,12 +905,18 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
 }
 
 .page-content article {
-  background-color: rgba(255, 214, 206, 0.3); 
-  border-radius: 20px 24px 23px 27px;
+  /*background-color: rgba(255, 214, 206, 0.3); 
+  max-width: 552px;   */
+  border: 2px dashed #262848;
   padding: 5px 32px 10px 32px;
-  max-width: 552px; /* 控制正文宽度 */
-  border: 2px dashed #973121;           /* 边框 */
-  box-shadow: 5px 5px 2px #97352160;   /* 柔和阴影 */
+  border-radius: 20px 24px 23px 27px;
+  box-shadow: 5px 5px 2px #1e374b60;   /* 柔和阴影 */
+  background-image: url("/images/paper-texture-1000.png"); /* 背景图路径 */
+  background-size: 700px auto !important; /* 缩小图案 */
+  background-position: top center !important; /* 居中，不偏 */
+  background-repeat: repeat !important; /* 更自然地拼接 */
+  background-attachment: scroll;
+
 }
 
 .page-content .article_inside {
@@ -845,7 +924,7 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.63);         /* 背景颜色 */
+  background-color: rgba(255, 255, 255, 0.4);         /* 背景颜色 */
   border-radius: 12px;
   padding: 5px 32px 10px 32px;
 }
@@ -855,18 +934,21 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.63);         /* 背景颜色 */
+  background-color: rgba(255, 255, 255, 0.4);         /* 背景颜色 */
   border-radius: 12px;
   padding: 5px 32px 10px 32px;
 }
 
 .article2 {
-  background-color: rgba(255, 214, 206, 0.3); 
-  border-radius: 20px 24px 23px 27px;
+  border: 2px dashed #262848;
   padding: 5px 32px 10px 32px;
-  max-width: 552px; /* 控制正文宽度 */
-  border: 2px dashed #973121;           /* 边框 */
-  box-shadow: 5px 5px 2px #97352160;   /* 柔和阴影 */
+  border-radius: 20px 24px 23px 27px;
+  box-shadow: 5px 5px 2px #1e374b60;   /* 柔和阴影 */
+  background-image: url("/images/paper-texture-1000.png"); /* 背景图路径 */
+  background-size: 700px auto !important; /* 缩小图案 */
+  background-position: top center !important; /* 居中，不偏 */
+  background-repeat: repeat !important; /* 更自然地拼接 */
+  background-attachment: scroll;
 }
 
 
@@ -875,7 +957,7 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.63);         /* 背景颜色 */
+  background-color: rgba(255, 255, 255, 0.4);         /* 背景颜色 */
   border-radius: 12px;
   padding: 5px 32px 10px 32px;
 }

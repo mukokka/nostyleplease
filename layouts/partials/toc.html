@@ -1,16 +1,15 @@
-{{ if (.Params.toc | default true ) }}
-    <div class="post-toc" id="post-toc">
-        <aside>
-            <header>
-                目录
-            </header>
-            {{ $emtLiPtrn := "(?s)<ul>\\s<li>\\s<ul>(.*)</li>\\s</ul>" }}
-            {{ $rplcEmtLi := "<ul>$1" }}
-            {{ .TableOfContents | replaceRE $emtLiPtrn $rplcEmtLi | safeHTML }}
-            <!-- https://github.com/gohugoio/hugo/issues/1778#issuecomment-483880269 -->
-            <!-- {{.TableOfContents}} -->
-        </aside>
-        <a href="#" id="toc-toggle"></a>
-    </div>
 
+{{ $rawToc := .TableOfContents }}
+
+{{ $hasToc := gt (len (findRE "<li" $rawToc)) 0 }}
+
+{{ if and (.Params.toc | default true) $hasToc }}
+  <div class="post-toc" id="post-toc">
+    <aside>
+      {{ $emtLiPtrn := "(?s)<ul>\\s<li>\\s<ul>(.*)</li>\\s</ul>" }}
+      {{ $rplcEmtLi := "<ul>$1" }}
+      {{ $rawToc | replaceRE $emtLiPtrn $rplcEmtLi | safeHTML }}
+    </aside>
+    <a href="#" id="toc-toggle"></a>
+  </div>
 {{ end }}
