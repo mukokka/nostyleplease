@@ -17,7 +17,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
-  favicon = ""
+  favicon = "/favicon.ico"
   description = "The last theme you'll ever need. Maybe."
   facebook = ""
   twitter = "https://twitter.com/GoHugoIO"
