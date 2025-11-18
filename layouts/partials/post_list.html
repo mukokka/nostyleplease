@@ -28,7 +28,7 @@
     <ul>
         {{- range $post := $posts -}}
         <li class="post-item">
-            <span>{{- ($post.Date | time.Format site.Params.theme_config.date_format) }}</span>
+            <span>{{- $post.Date | time.Format "01-02" -}}</span>
             <a href="{{ $post.Permalink | relURL }}">{{ $post.Title }}</a>
         </li>
         {{ end }}

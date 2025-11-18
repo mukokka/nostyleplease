@@ -12,9 +12,11 @@ comment: false
 
 ### 关于博客
 
-- 本站由[Hugo](https://gohugo.io/)驱动，主题改自[nostyleplease](https://github.com/hanwenguo/hugo-theme-nostyleplease)，像素爱心来自[ frelayasia](https://www.flaticon.com/search?style_id=1222&author_id=2984&word=pixel+art&type=standard)
+- 本站由[Hugo](https://gohugo.io/)驱动，主题改自[nostyleplease](https://github.com/hanwenguo/hugo-theme-nostyleplease)
 
-- 博主书影音标记未半而中道崩殂的遗迹在：（[NeoDB](https://neodb.social/users/twoappleaday/)、[书架](https://docs.iceco.icu/#/read/list)）
+- 像素爱心来自[ frelayasia](https://www.flaticon.com/search?style_id=1222&author_id=2984&word=pixel+art&type=standard)，小狗光标来自[Club559](https://www.rw-designer.com/cursor-set/my-cursors-my-coursors-cool)，favicon来自[Flaticon](https://www.flaticon.com/)
+
+- 博主书影音标记未半而中道崩殂的遗迹在：[NeoDB](https://neodb.social/users/twoappleaday/)、[书架](https://docs.iceco.icu/#/read/list)
 
 - 已关闭RSS输出，请勿以任何形式存档我的博客。
 

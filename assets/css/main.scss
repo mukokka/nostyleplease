@@ -232,6 +232,7 @@ img {
   display: block;
   margin: 0 auto;
   border-radius: 12px;
+  box-shadow: 2px 2px 4px #122135c6;
 }
 
 figcaption {
@@ -620,7 +621,7 @@ details[open] summary {
   border-radius: 0px;                   /* 圆角 */
   border: 0px solid #a25d41;           /* 边框 */
   box-shadow: 0px 0px 0px #88403264;   /* 柔和阴影 */
-  transform: rotate(355deg);
+  transform: rotate(357deg);
 
 }
 
@@ -1059,7 +1060,8 @@ img.emoji {
   vertical-align: -0.2em; /* 表情在文字间对齐可以微调 */
   border-radius: 0px;
   transition: transform 0.2s ease, height 0.2s ease, width 0.2s ease;
-  }
+  box-shadow: none !important;
+}
 
 img.emoji:hover {
   height: 2.4em; /* 如果需要像毛象一样大，则height和width都设置为1.8em */
@@ -1196,7 +1198,8 @@ img.emoji:hover {
 
 /* 图片本体：不强制 block，自动适应父容器 */
 .zoomable{
-  border-radius: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 4px #122135c6;
 }
 
 
@@ -1214,5 +1217,6 @@ img.emoji:hover {
   width: 100%;
   height: auto;
   border-radius: 12px;
+  box-shadow: 2px 2px 4px #122135c6;
 }
 
