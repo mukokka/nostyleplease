@@ -37,6 +37,7 @@ disableKinds = ["RSS"]
     ordered    = false
 
 [params]
+  favicon = "/favicon.ico"
   enableCarousel = true
   description = ''
   [params.theme_config]
