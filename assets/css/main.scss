@@ -90,7 +90,7 @@ body {
 // 应用主题样式
 body[a="dark"] {
   background-image: url("/images/v752-ning-21b.jpg"); /* 背景图路径 */
-  background-repeat: no-repeat;                   /* 重复平铺 */
+  background-repeat: repeat;                   /* 重复平铺 */
   background-size: 1700px auto;      /* 控制单个图案大小 */
   background-position: top left;
   background-color: #dff0fd00;                   /* 背景底色，防止图片透明 */
@@ -287,7 +287,7 @@ details[open] summary {
   background: #ffffffce;
   box-shadow: 2px 2px 2px #3378bd60;
   padding: 6px 10px;
-  border: 2px dashed #262848;
+  border: 0px dashed #262848;
 
   font-weight: 600;
   font-size: 0.95rem;
@@ -907,7 +907,7 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
 .page-content article {
   /*background-color: rgba(255, 214, 206, 0.3); 
   max-width: 552px;   */
-  border: 2px dashed #262848;
+  border: 0px dashed #262848;
   padding: 5px 32px 10px 32px;
   border-radius: 20px 24px 23px 27px;
   box-shadow: 5px 5px 2px #1e374b60;   /* 柔和阴影 */
@@ -924,7 +924,7 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.4);         /* 背景颜色 */
+  background-color: rgba(255, 255, 255, 0);         /* 背景颜色 */
   border-radius: 12px;
   padding: 5px 32px 10px 32px;
 }
@@ -934,7 +934,7 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.4);         /* 背景颜色 */
+  background-color: rgba(255, 255, 255, 0);         /* 背景颜色 */
   border-radius: 12px;
   padding: 5px 32px 10px 32px;
 }
@@ -957,7 +957,7 @@ a:hover{cursor:url(/images/Pockycrunchypink.cur), pointer !important;} //指向�
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.4);         /* 背景颜色 */
+  background-color: rgba(255, 255, 255, 0);         /* 背景颜色 */
   border-radius: 12px;
   padding: 5px 32px 10px 32px;
 }
