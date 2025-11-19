@@ -647,7 +647,7 @@ details[open] summary {
   position: absolute;
   width: 520px; 
   aspect-ratio: 1916 / 723;
-  background-image: url("/images/white_torn_paper.png");
+  background-image: url("/images/white_torn_paper_cut.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 400px;        /* 让整张爱心完整显示，不被拉伸 */
@@ -1317,7 +1317,7 @@ letter-spacing: 0.8px;
 // 以上为组件核心样式，以下是我的边框样式，可以删去。
 
 .note__item {
-margin-top: 45px;
+margin-top: 35px;
 margin-left: 20px;
 width: 85%;
 position: relative;
