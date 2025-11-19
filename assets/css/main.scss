@@ -301,8 +301,8 @@ details[open] summary {
 
 .post-meta > *:nth-child(1) a {
   transform: rotate(-3deg) translateY(-4px) !important;
-  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
-  background-size: 1000px auto !important; /* 缩小图案 */
+  background-image: url("/images/paper-texture-square-1000-y.png"); /* 背景图路径 */
+  background-size: 500px auto !important; /* 缩小图案 */
   background-position: center !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
@@ -310,8 +310,8 @@ details[open] summary {
 
 .post-meta > *:nth-child(2) a {
   transform: rotate(2deg) translateY(6px) !important;
-  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
-  background-size: 100px auto !important; /* 缩小图案 */
+  background-image: url("/images/paper-texture-square-1000-y.png"); /* 背景图路径 */
+  background-size: 500px auto !important; /* 缩小图案 */
   background-position: left !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
@@ -319,8 +319,8 @@ details[open] summary {
 
 .post-meta > *:nth-child(3) a {
   transform: rotate(-1deg) translateY(3px) !important;
-  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
-  background-size: 100px auto !important; /* 缩小图案 */
+  background-image: url("/images/paper-texture-square-y.png"); /* 背景图路径 */
+  background-size: 500px auto !important; /* 缩小图案 */
   background-position: right !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
@@ -328,8 +328,8 @@ details[open] summary {
 
 .post-meta > *:nth-child(4) a {
   transform: rotate(3deg) translateY(-5px) !important;
-  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
-  background-size: 100px auto !important; /* 缩小图案 */
+  background-image: url("/images/paper-texture-square-y.png"); /* 背景图路径 */
+  background-size: 500px auto !important; /* 缩小图案 */
   background-position: top center !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
@@ -337,8 +337,8 @@ details[open] summary {
 
 .post-meta > *:nth-child(5) a {
   transform: rotate(-2deg) translateY(5px) !important;
-  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
-  background-size: 100px auto !important; /* 缩小图案 */
+  background-image: url("/images/paper-texture-square-y.png"); /* 背景图路径 */
+  background-size: 500px auto !important; /* 缩小图案 */
   background-position: top left !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
@@ -346,8 +346,8 @@ details[open] summary {
 
 .post-meta > *:nth-child(6) a {
   transform: rotate(1.5deg) translateY(-3px) !important;
-  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
-  background-size: 100px auto !important; /* 缩小图案 */
+  background-image: url("/images/paper-texture-square-y.png"); /* 背景图路径 */
+  background-size: 500px auto !important; /* 缩小图案 */
   background-position: top right !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
@@ -935,7 +935,7 @@ a:hover{cursor:url(/images/puppy.cur), pointer !important;} //指向链接时的
   border: 2px dashed #262848;
   border-radius: 20px 24px 23px 27px;
   box-shadow: 5px 5px 2px #1e374b60;   /* 柔和阴影 */
-  background-image: url("/images/paper-texture-square.jpg"); /* 背景图路径 */
+  background-image: url("/images/paper-texture-square-y.png"); /* 背景图路径 */
   background-size: 700px auto !important; /* 缩小图案 */
   background-position: top center !important; /* 居中，不偏 */
   background-repeat: repeat !important; /* 更自然地拼接 */
@@ -980,7 +980,7 @@ a:hover{cursor:url(/images/puppy.cur), pointer !important;} //指向链接时的
   padding: 5px 32px 10px 32px;
   border-radius: 20px 24px 23px 27px;
   box-shadow: 5px 5px 2px #1e374b60;   /* 柔和阴影 */
-  background-image: url("/images/paper-texture-1000-40.png"); /* 背景图路径 */
+  background-image: url("/images/paper-texture-1000-40-y.png"); /* 背景图路径 */
   background-size: 700px auto !important; /* 缩小图案 */
   background-position: top center !important; /* 居中，不偏 */
   background-repeat: repeat !important; /* 更自然地拼接 */
@@ -1013,7 +1013,7 @@ a:hover{cursor:url(/images/puppy.cur), pointer !important;} //指向链接时的
   padding: 5px 32px 10px 32px;
   border-radius: 20px 24px 23px 27px;
   box-shadow: 5px 5px 2px #1e374b60;   /* 柔和阴影 */
-  background-image: url("/images/paper-texture-1000-40.png"); /* 背景图路径 */
+  background-image: url("/images/paper-texture-1000-40-y.png"); /* 背景图路径 */
   background-size: 700px auto !important; /* 缩小图案 */
   background-position: top center !important; /* 居中，不偏 */
   background-repeat: repeat !important; /* 更自然地拼接 */
