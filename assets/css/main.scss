@@ -629,7 +629,7 @@ details[open] summary {
   background-position: center;
   background-size: 360px;        /* 让整张爱心完整显示，不被拉伸 */
   margin-top: -60px;
-  margin-left: -40px;
+  margin-left: -60px;
   filter: drop-shadow(2px 2px 2px #bd5c3360); /* ❤️ 阴影 */
   
   transform: rotate(3deg);
@@ -674,7 +674,7 @@ details[open] summary {
 
 .two-column-layout .heart-note-content {
   background-color: rgba(252, 198, 179, 0);          /* 背景颜色 */
-  padding: 110px 0px 10px 90px;           /* 上 右 下 左内边距 */
+  padding: 120px 0px 10px 120px;           /* 上 右 下 左内边距 */
   border-radius: 0px;                   /* 圆角 */
   border: 0px solid #a25d41;           /* 边框 */
   box-shadow: 0px 0px 0px #88403264;   /* 柔和阴影 */
@@ -695,7 +695,7 @@ details[open] summary {
 
 @media (max-width: 768px) {
   .two-column-layout .heart-note-content {
-    padding:120px 0px 10px 50px;           /* 上 右 下 左内边距 */
+    padding:120px 0px 10px 120px;           /* 上 右 下 左内边距 */
   }
 }
 
