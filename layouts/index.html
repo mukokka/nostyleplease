@@ -17,12 +17,19 @@
         <p><a href="{{ .Site.BaseURL }}goods">展柜</a></p>  
     </aside>
 
-    <div class="heart-note">
-    <main class="content">
-        {{ .Content }}
-        {{ partial "message_board.html" . }}
-        {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
-    </main>
+    <div class="paper-notes">
+        <div class="heart-note">
+        <main class="heart-note-content">
+            {{ .Content }}
+            {{ partial "message_board.html" . }}
+            {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }} 
+        </main>
+        </div>
+        <div class="status-note">
+        <main class="status-note-content">
+            {{ partial "status-cafe.html" . }}  
+        </main>
+        </div>
     </div>
 </div>
 {{ end }}

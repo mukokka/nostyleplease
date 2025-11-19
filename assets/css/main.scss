@@ -388,10 +388,14 @@ details[open] summary {
   padding: 1rem;
 }
 
+.paper-notes {
+  flex-direction: column;  /* 改为上下排列 */
+}
+
 /* 设置两栏布局 */
 .two-column-layout {
   display: flex;
-  gap: 10px;                             /* 两栏之间的间距 */
+  gap: 20px;                             /* 两栏之间的间距 */
   margin-top: 20px;
 }
 
@@ -407,16 +411,13 @@ details[open] summary {
     order: 1;                /* 如果你想菜单在下方可以改成1或2 */
   }
 
-  .two-column-layout .heart-note {
+  .two-column-layout .paper-notes {
     order: 2;
   }
 }
 
 /* 手机端：导航横向排列 */
 @media (max-width: 768px) {
-  .two-column-layout {
-    flex-direction: column;
-  }
 
   .two-column-layout .note {
     display: flex;
@@ -449,7 +450,6 @@ details[open] summary {
   }
 
   .two-column-layout .note a:hover {
-    background: #b6c99682;
     transform: translateY(-2px);
   }
 
@@ -485,13 +485,18 @@ details[open] summary {
   }
 
 .two-column-layout .note {
-  flex: 1;                               /* note 栏的宽度 */
-  background-color: #ffffff00;         /* 背景颜色 */
-  padding: 5px 0px 5px 20px;           /* 上 右 下 左内边距 */
+  flex: 0 0 130px; 
+  background-color: #bc222200;         /* 背景颜色 */
+  padding: 50px 0px 5px 20px;           /* 上 右 下 左内边距 */
   border-radius: 10px;                   /* 圆角 */
   border: 0px solid #a25d41;           /* 边框 */
   box-shadow: 0px 0px 0px #88403264;   /* 柔和阴影 */
-  margin-top:20px;
+  margin-top:0px;
+}
+
+.two-column-layout .paper-notes {
+  background-color: #bc222200;         /* 背景颜色 */
+  flex: 1;                               /* note 栏的宽度 */
 }
 
 .note a {
@@ -588,51 +593,114 @@ details[open] summary {
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
 }
+.note > *:nth-child(1) a:hover {
+  transform: rotate(3deg) scale(1.05);
+}
+
+.note > *:nth-child(2) a:hover {
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.note > *:nth-child(3) a:hover {
+  transform: rotate(2deg) scale(1.05);
+}
+
+.note > *:nth-child(4) a:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.note > *:nth-child(5) a:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.note > *:nth-child(6) a:hover {
+  transform: rotate(-4deg) scale(1.05);
+}
+
 
 
 /* 爱心便签盒子 */
 .two-column-layout .heart-note {
-  flex: 4;                               /* content 栏的宽度 */
   position: relative;
   width: 520px; 
   aspect-ratio: 600 / 606;
-  background-image: url("/images/2-lighter.png");
+  background-image: url("/images/2-lighter-cut.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 500px;        /* 让整张爱心完整显示，不被拉伸 */
-  padding: 0px 25px 0px 20px;    /* 调整文字在爱心里的位置 */
-  margin: 0 auto;                  /* 居中 */
+  background-size: 360px;        /* 让整张爱心完整显示，不被拉伸 */
+  margin-top: -60px;
+  margin-left: -40px;
   filter: drop-shadow(2px 2px 2px #bd5c3360); /* ❤️ 阴影 */
+  
+  transform: rotate(3deg);
+  transition: transform 0.35s cubic-bezier(.22, 1, .36, 1);   /* ⭐⭐ 丝滑动画 */
+  transform-origin: center center;                           /* ⭐ 避免旋转抖动 */
 }
+
+.two-column-layout .heart-note:hover {
+  transform: rotate(-6deg) scale(1.05);
+}
+
+
+
+.two-column-layout .status-note {
+  position: absolute;
+  width: 520px; 
+  aspect-ratio: 1916 / 723;
+  background-image: url("/images/white_torn_paper.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;        /* 让整张爱心完整显示，不被拉伸 */
+  margin: -170px 20px;            /*上下 左右*/    
+  filter: drop-shadow(2px 2px 2px #bd5c3360); /* ❤️ 阴影 */
+  transform: rotate(-3deg);
+  
+  transition: transform 0.35s cubic-bezier(.22, 1, .36, 1);   /* ⭐⭐ 丝滑动画 */
+  transform-origin: center center;                           /* ⭐ 避免旋转抖动 */
+}
+
+.two-column-layout .status-note:hover {
+  transform: rotate(4deg) scale(1.05);
+}
+
 
 
 /* 适配小屏：宽度缩小一点 */
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   .two-column-layout .heart-note {
-  padding: 0px 0px;    /* 调整文字在爱心里的位置 */
-  margin-top:-80px;
-
+    margin-top:-80px;
   }
 }
 
-.two-column-layout .content {
+.two-column-layout .heart-note-content {
   background-color: rgba(252, 198, 179, 0);          /* 背景颜色 */
-  padding: 60px 0px 10px 5px;           /* 上 右 下 左内边距 */
+  padding: 110px 0px 10px 90px;           /* 上 右 下 左内边距 */
   border-radius: 0px;                   /* 圆角 */
   border: 0px solid #a25d41;           /* 边框 */
   box-shadow: 0px 0px 0px #88403264;   /* 柔和阴影 */
-  transform: rotate(357deg);
+  transform: rotate(2deg);
+
+}
+
+.two-column-layout .status-note-content {
+  background-color: rgba(252, 198, 179, 0);          /* 背景颜色 */
+  margin-top: -20px;
+  padding:0px 30px 0px 50px;           /* 上 右 下 左内边距 */
+  border-radius: 0px;                   /* 圆角 */
+  border: 0px solid #a25d41;           /* 边框 */
+  box-shadow: 0px 0px 0px #88403264;   /* 柔和阴影 */
+  transform: rotate(0deg);
 
 }
 
 @media (max-width: 768px) {
-  .two-column-layout .content {
+  .two-column-layout .heart-note-content {
     padding:120px 0px 10px 50px;           /* 上 右 下 左内边距 */
   }
 }
 
 
-.two-column-layout .content> ul {
+.two-column-layout .heart-note-content> ul {
   margin-right: 20px;
   margin-left: 10px;
   background-color: rgba(255, 255, 255, 0);         /* 背景颜色 */
@@ -641,7 +709,7 @@ details[open] summary {
   list-style: none !important;                      /* 去掉默认圆点 */
 }
 
-.two-column-layout .content> ul> ul {
+.two-column-layout .heart-note-content> ul> ul {
   list-style: none !important; /* 去掉默认圆点 */
   padding-left: 22px; /* 留出花的空间 */
 }
@@ -1000,7 +1068,7 @@ a:hover{cursor:url(/images/puppy.cur), pointer !important;} //指向链接时的
 
 .page-content ul li {
   position: relative;
-  padding-left: 1.4em; /* 给小花留空间 */
+  padding-left: 0em; /* 给小花留空间 */
   margin-bottom: 0.4em;
   line-height: 1.4;
 }
@@ -1008,7 +1076,7 @@ a:hover{cursor:url(/images/puppy.cur), pointer !important;} //指向链接时的
 .page-content ul li::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -1.4em;
   top: 0.35em;
   width: 14px;
   height: 14px;
@@ -1220,3 +1288,49 @@ img.emoji:hover {
   box-shadow: 2px 2px 4px #122135c6;
 }
 
+.statuscafe-entry {
+border-radius: 10px;
+padding: 5px;
+margin-bottom: 10px;
+background-color: var(--neodb-card-color);
+}
+
+.statuscafe-username {
+margin: 0.5em;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1em;
+}
+
+.status-meta {
+margin-left: auto;
+display: flex;
+gap: 0.5em;
+}
+
+.statuscafe-content {
+margin: 0 1em 0.5em 1em;
+letter-spacing: 0.8px;
+}
+
+// 以上为组件核心样式，以下是我的边框样式，可以删去。
+
+.note__item {
+margin-top: 45px;
+margin-left: 20px;
+width: 85%;
+position: relative;
+margin-bottom: 15px;
+}
+
+.note__day {
+padding: 5px;
+font: 90% "HuiwenMincho", cursive;
+}
+
+.note__list {
+padding: 8px 12px;
+line-height: 1.4;
+font-size: 90%;
+}
