@@ -95,10 +95,16 @@ html { height: 100%; }
   src: url('/fonts/HYPixel11pxU-2.ttf') format('opentype');
 }
 
+@font-face {
+  font-family: 'pixel2';
+  src: url('/fonts/LanaPixel.ttf') format('opentype');
+}
+
+
 
 
 body {
-  font-family: 'pixel', 'handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
+  font-family: 'pixel', 'pixel2','handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
@@ -232,7 +238,7 @@ code.has-jax {
 }
 
 blockquote {
-  font-family: 'pixel', 'handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
+  font-family: 'pixel2', 'handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
   background-color: #f7f2d481;
   background-image:
     linear-gradient(0deg, rgba(245, 185, 106, 0.479) 1px, transparent 1px),
@@ -703,7 +709,7 @@ details[open] summary {
 }
 
 .two-column-layout .status-note-content {
-  font-family: 'handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
+  font-family: 'pixel2', 'Noto Serif SC','Noto Serif KR', sans-serif;
   font-size: 17px;
   background-color: rgba(252, 198, 179, 0);          /* 背景颜色 */
   margin-top: -20px;
@@ -1356,3 +1362,19 @@ padding: 8px 12px;
 line-height: 1.4;
 font-size: 90%;
 }
+
+img.blobcatand {
+  height: 1.8em; /* 如果需要像毛象一样大，则height和width都设置为1.8em */
+  width: 1.8em;
+  display: inline;
+  margin: 0.15em; 
+  vertical-align: -0.2em; /* 表情在文字间对齐可以微调 */
+  border-radius: 0px;
+  transition: transform 0.2s ease, height 0.2s ease, width 0.2s ease;
+  box-shadow: none !important;
+}
+
+img.blobcatand:hover {
+  height: 2.4em; /* 如果需要像毛象一样大，则height和width都设置为1.8em */
+  width: 2.4em;
+  }
