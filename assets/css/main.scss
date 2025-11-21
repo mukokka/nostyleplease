@@ -570,6 +570,25 @@ details[open] summary {
   background-attachment: fixed;
 }
 
+/* 给第 1 个菜单项添加动画 */
+.note > *:nth-child(1) a {
+  animation: floaty 8s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floaty {
+  0% {
+    transform: rotate(3deg) translateY(-4px);
+  }
+  40% {
+    transform: rotate(12deg) translateY(3px);
+  }
+  100% {
+    transform: rotate(3deg) translateY(-4px);
+  }
+}
+
 /* 第2个按钮 */
 .note > *:nth-child(2) a {
   transform: rotate(2deg) translateX(6px);
@@ -578,6 +597,24 @@ details[open] summary {
   background-position: left !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
+}
+
+.note > *:nth-child(2) a {
+  animation: floaty2 15s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floaty2 {
+  0% {
+    transform: rotate(-2deg) translateY(3px);
+  }
+  60% {
+    transform: rotate(-10deg) translateY(-4px);
+  }
+  100% {
+    transform: rotate(-2deg) translateY(3px);
+  }
 }
 
 /* 第3个按钮 */
@@ -590,6 +627,24 @@ details[open] summary {
   background-attachment: fixed;
 }
 
+.note > *:nth-child(3) a {
+  animation: floaty3 10s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floaty3 {
+  0% {
+    transform: rotate(-5deg) translateY(4px);
+  }
+  35% {
+    transform: rotate(6deg) translateY(-3px);
+  }
+  100% {
+    transform: rotate(-5deg) translateY(4px);
+  }
+}
+
 /* 第4个按钮 */
 .note > *:nth-child(4) a {
   transform: rotate(3deg) translateX(-5px);
@@ -598,6 +653,24 @@ details[open] summary {
   background-position: top center !important; /* 居中，不偏 */
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
+}
+
+.note > *:nth-child(4) a {
+  animation: floaty4 12s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floaty4 {
+  0% {
+    transform: rotate(2deg) translateY(2px);
+  }
+  60% {
+    transform: rotate(-8deg) translateY(-7px);
+  }
+  100% {
+    transform: rotate(2deg) translateY(2px);
+  }
 }
 
 /* 第5个按钮 */
@@ -610,6 +683,24 @@ details[open] summary {
   background-attachment: fixed;
 }
 
+.note > *:nth-child(5) a {
+  animation: floaty5 10s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floaty5 {
+  0% {
+    transform: rotate(-10deg) translateY(2px);
+  }
+  55% {
+    transform: rotate(2deg) translateY(-8px);
+  }
+  100% {
+    transform: rotate(-10deg) translateY(2px);
+  }
+}
+
 /* 第6个按钮 */
 .note > *:nth-child(6) a {
   transform: rotate(1.5deg) translateX(-3px);
@@ -619,6 +710,25 @@ details[open] summary {
   background-repeat: no-repeat !important; /* 更自然地拼接 */
   background-attachment: fixed;
 }
+
+.note > *:nth-child(6) a {
+  animation: floaty4 9s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floaty6 {
+  0% {
+    transform: rotate(4deg) translateY(5px);
+  }
+  65% {
+    transform: rotate(-2deg) translateY(9px);
+  }
+  100% {
+    transform: rotate(4deg) translateY(5px);
+  }
+}
+
 .note > *:nth-child(1) a:hover {
   transform: rotate(3deg) scale(1.05);
 }
@@ -667,6 +777,24 @@ details[open] summary {
   transform: rotate(-6deg) scale(1.05);
 }
 
+/* 给第 1 个菜单项添加动画 */
+.two-column-layout .heart-note {
+  animation: floatyheart 7s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floatyheart {
+  0% {
+    transform: rotate(-2deg) translateY(0px);
+  }
+  40% {
+    transform: rotate(2deg) translateY(0px);
+  }
+  100% {
+    transform: rotate(-2deg) translateY(0px);
+  }
+}
 
 
 .two-column-layout .status-note {
@@ -706,6 +834,25 @@ details[open] summary {
   box-shadow: 0px 0px 0px #88403264;   /* 柔和阴影 */
   transform: rotate(2deg);
 
+}
+
+/* 给第 1 个菜单项添加动画 */
+.two-column-layout .status-note {
+  animation: floatystatus 10s ease-in-out infinite;
+  display: inline-block;   /* 必要，不然 transform 无效 */
+}
+
+/* 🌟 小幅度晃动关键帧，可以自己调 */
+@keyframes floatystatus {
+  0% {
+    transform: rotate(0deg) translateX(-500px) translateY(450px);
+  }
+  40% {
+    transform: rotate(2deg) translateX(-500px) translateY(460px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(-500px) translateY(450px);
+  }
 }
 
 .two-column-layout .status-note-content {
