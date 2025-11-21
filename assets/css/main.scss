@@ -78,8 +78,27 @@ body[a="light"] { @include light-appearance; }
 
 html { height: 100%; }
 
+ 
+@font-face {
+  font-family: 'handwriting';
+  src: url('/fonts/YeZiGongChangXiaoShiTou-2.ttf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'blockquote';
+  src: url('/fonts/YeZiGongChangXiaoShiTou-2.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'pixel';
+  src: url('/fonts/HYPixel11pxU-2.ttf') format('opentype');
+}
+
+
+
 body {
-  font-family: 'Noto Serif SC','Noto Serif KR', serif;
+  font-family: 'pixel', 'handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
@@ -213,6 +232,7 @@ code.has-jax {
 }
 
 blockquote {
+  font-family: 'pixel', 'handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
   background-color: #f7f2d481;
   background-image:
     linear-gradient(0deg, rgba(245, 185, 106, 0.479) 1px, transparent 1px),
@@ -683,6 +703,8 @@ details[open] summary {
 }
 
 .two-column-layout .status-note-content {
+  font-family: 'handwriting', 'Noto Serif SC','Noto Serif KR', sans-serif;
+  font-size: 17px;
   background-color: rgba(252, 198, 179, 0);          /* 背景颜色 */
   margin-top: -20px;
   padding:0px 30px 0px 50px;           /* 上 右 下 左内边距 */
