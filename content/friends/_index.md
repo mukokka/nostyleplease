@@ -14,8 +14,9 @@ slug: 'friends/'
 - [Mengru](https://mengru.space/)：Mengru 在互联网上的小小角落。
 - [谢谢所有的鱼](https://gregueria.icu/)：您首页的奶牛猫图片转发大使
 - [咖喱](https://joysblog.vercel.app/)：即使埋藏在内心也没关系
-- [呆呆不是槑](http://graugris.icu/)：梦想是实现旺仔牛奶自由
+- [呆呆不是槑](http://graugris.icu/)：You’re my god-given solace.
 - [昼河万里](https://tothemoonriver.icu/)：一起去看月亮吧。
+- [夜航南飞](https://banshou-air.netlify.app/)：The world is beautiful. Let me come through it to you.
 
 ### 欢迎和我交换友链><¡
 
