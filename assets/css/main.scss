@@ -116,7 +116,7 @@ body {
 body[a="dark"] {
   background-image: url("/images/v752-ning-21b.jpg"); /* 背景图路径 */
   background-repeat: repeat;                   /* 重复平铺 */
-  background-size: 1700px auto;      /* 控制单个图案大小 */
+  background-size: 1500px auto;      /* 控制单个图案大小 */
   background-position: top left;
   background-color: #dff0fd00;                   /* 背景底色，防止图片透明 */
   background-attachment: fixed;
@@ -149,10 +149,11 @@ body[a="dark"] {
 /* 手机端背景优化 */
 @media (max-width: 768px) {
   body {
-    background-size: 1500px auto !important; /* 缩小图案 */
+    background-image: url("/images/v752-ning-21b-2.jpg") !important; /* 背景图路径 */
+    background-size: 1000px auto !important; /* 缩小图案 */
     background-position: top left !important; /* 居中，不偏 */
     background-repeat: no-repeat !important; /* 更自然地拼接 */
-    background-attachment: fixed;
+    background-attachment: fixed !important;
   }
 }
 
@@ -855,6 +856,12 @@ details[open] summary {
   }
 }
 
+@media (max-width: 768px) { 
+  .two-column-layout .status-note {
+    margin-top:-150px;
+  }
+}
+
 .two-column-layout .status-note-content {
   font-family: 'pixel2', 'Noto Serif SC','Noto Serif KR', sans-serif;
   font-size: 17px;
@@ -1128,7 +1135,7 @@ a:hover{cursor:url(/images/puppy.cur), pointer !important;} //指向链接时的
 }
 
 .post-toc ul ul {
-  margin-left: -1.75rem;   /* 改成你想要的 */
+  margin-left: -0.75rem;   /* 改成你想要的 */
 }
 
 
