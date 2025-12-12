@@ -1023,6 +1023,35 @@ strong, b {
   text-shadow: #decb1d8d 0px 0px 10px;
 }
 
+.post-categories-inarticle {
+  text-align: left;
+  margin-top: 0px; /* 添加一些顶部间距 */
+  display: block;
+  font-size: 15px; /* 设置字体大小 */
+  margin-left: 0px; /* 添加一些左侧间距 */
+}
+
+.post-categories-inarticle a {
+  text-decoration: none; /* 移除链接下划线 */
+  text-shadow: none;
+  display: inline-block;       /* 一行显示一个标签块 */
+}
+
+.post-categories-inarticle a {
+    pointer-events: none;
+    cursor: default;
+    color: inherit;  /* 防止主题自动变蓝 */
+    text-decoration: none;
+    color: #020810 !important; /* 设置文字颜色 */
+}
+
+
+.post-categories-inarticle a::before {
+  content:"#";
+  color: #413d07; /* 设置强调文字颜色 */
+  font-weight: bold; /* 强调 "Categories:" 文字 */
+}
+
 .post-categories {
   margin-top: 0px; /* 添加一些顶部间距 */
   display: block;
@@ -1570,4 +1599,30 @@ img.blobcatand:hover {
 /* 悬停动画（可爱的小“跳一下”） */
 #back-to-top:hover {
   transform: scale(1.5);
+}
+
+.category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: #f3f3f300;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #ddd;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.tag-chip:hover {
+  background: #eaeaea;
+  border-color: #ccc;
 }

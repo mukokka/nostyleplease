@@ -23,15 +23,72 @@
 <div class="article2">
 <div class="article2_inside">
 <div class="category-list">
-  <h1>{{ .Title }}</h1>
-  <ul>
-    {{ range .Pages }}
-    <li>
-        <span class="post-date">{{ .Date.Format "2006-01-02" }}  </span>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ul>
+  <h1>标签</h1>
+
+      {{ if eq .Kind "taxonomy" }}
+
+      <p>2025起突然爱上打标签了，但都是乱打的，点进去大概率也只有一条博客。</p>
+      <p>给更久之前的博客补打标签的话有点太奇怪了，就这样吧，也许某天之后又不想打标签了？？</p>
+
+      {{ $items := slice }}
+      {{ range $name, $term := .Data.Terms }}
+        {{ range $p := $term.Pages }}
+          {{ $year := $p.Lastmod.Format "2006" }}
+          {{ $ts   := $p.Lastmod.Format "20060102150405" }}
+          {{ $sortKey := printf "%s-%s" $year $ts }}
+          {{ $items = $items | append (dict
+            "term"    $term
+            "year"    $year
+            "sortKey" $sortKey
+          ) }}
+        {{ end }}
+      {{ end }}
+
+      {{ $sorted := sort $items "sortKey" "desc" }}
+
+      {{ if gt (len $sorted) 0 }}
+        {{ $currentYear := "" }}
+        {{ $seen := newScratch }}
+
+        {{ range $i, $item := $sorted }}
+          {{ $term := index $item "term" }}
+          {{ $year := index $item "year" }}
+
+          {{ $key := printf "%s|%s" $year $term.Page.LinkTitle }}
+
+          {{ if not ($seen.Get $key) }}
+            {{ $seen.Set $key true }}
+
+            {{ if ne $year $currentYear }}
+              {{ if ne $currentYear "" }}
+                </div>
+              {{ end }}
+              <h2>{{ $year }}</h2>
+              <div class="category-tags">
+              {{ $currentYear = $year }}
+            {{ end }}
+
+            <a class="tag-chip" href="{{ $term.Page.RelPermalink }}">
+              {{ $term.Page.LinkTitle }}
+            </a>
+          {{ end }}
+        {{ end }}
+
+        {{ if ne $currentYear "" }}
+          </div>
+        {{ end }}
+      {{ else }}
+        <p>还没有任何分类。</p>
+      {{ end }}
+        
+
+      {{ else }}
+        <ul>
+          {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
 </div>
 </div>
 </div>
