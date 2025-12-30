@@ -17,6 +17,7 @@ slug: 'friends/'
 - [呆呆不是槑](http://graugris.icu/)：You’re my god-given solace.
 - [昼河万里](https://tothemoonriver.icu/)：一起去看月亮吧。
 - [夜航南飞](https://banshou-air.netlify.app/)：The world is beautiful. Let me come through it to you.
+- [7REES](https://www.7rees.cc/)：自由流动的树
 
 ### 欢迎和我交换友链><¡
 
