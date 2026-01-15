@@ -18,6 +18,7 @@ slug: 'friends/'
 - [昼河万里](https://tothemoonriver.icu/)：一起去看月亮吧。
 - [夜航南飞](https://banshou-air.netlify.app/)：The world is beautiful. Let me come through it to you.
 - [7REES](https://www.7rees.cc/)：自由流动的树
+- [昼梦日和](https://nanako.icu/): 梦是现实的延续，现实是梦的终结
 
 ### 欢迎和我交换友链><¡
 
