@@ -16,9 +16,8 @@
     <p><a href="{{ .Site.BaseURL }}">首页</a></p> 
     <p><a href="{{ .Site.BaseURL }}about">关于</a></p> 
     <p><a href="{{ .Site.BaseURL }}posts">归档</a></p> 
-    <p><a href="{{ .Site.BaseURL }}weekly">周记</a></p> 
     <p><a href="{{ .Site.BaseURL }}friends/">友邻</a></p> 
-    <p><a href="{{ .Site.BaseURL }}goods">展柜</a></p> 
+    <p><a href="{{ .Site.BaseURL }}categories/">标签</a></p>
   </div>
 <div class="article2">
 <div class="article2_inside">
@@ -28,7 +27,7 @@
       {{ if eq .Kind "taxonomy" }}
 
       <p>2025起突然爱上打标签了，但都是乱打的，点进去大概率也只有一条博客。</p>
-      <p>给更久之前的博客补打标签的话有点太奇怪了，就这样吧，也许某天之后又不想打标签了？？</p>
+      <p>给更久之前的博客补打标签的话有点太奇怪了，就这样吧……</p>
 
       {{ $items := slice }}
       {{ range $name, $term := .Data.Terms }}
